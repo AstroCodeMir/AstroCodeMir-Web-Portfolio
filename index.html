@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroCodeMir</title>
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='1em' font-size='80'%3E🌸%3C/text%3E%3C/svg%3E">
@@ -113,13 +113,13 @@
          transition-all duration-700 ease-out
          delay-100
   ">
-<h1 class="font-extrabold text-5xl sm:text-6xl md:text-7xl tracking-tight 
+                    <h1 class="font-extrabold text-5xl sm:text-6xl md:text-7xl tracking-tight 
            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
            bg-clip-text text-transparent 
            flex flex-col items-center sm:flex-row sm:items-start sm:text-left">
-  <span class="sm:mr-2">Francine</span>
-  <span>Famorcan</span>
-</h1>
+                        <span class="sm:mr-2">Francine</span>
+                        <span>Famorcan</span>
+                    </h1>
 
 
 
@@ -233,10 +233,9 @@
                         <img src="./images/AlysWebApp.png" class="w-full h-full object-cover" />
                         <!-- Hover Overlay with "Live View" Button -->
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
-            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button onclick="openDynamicModal(this)" data-title="Aly's Craft - Preview"
-                                data-desktop-img="./images/BakesCookiesDesktop.gif"
-                                data-mobile-img="./images/BakesCookiesMobile.gif"
+            opacity-100 sm:opacity-0 sm:group-hover:opacity-100 
+            transition-opacity duration-300">
+                            <a href="https://astrocodemir.github.io/AlysCraft/" target="_blank"
                                 class="bg-pink-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg hover:bg-pink-600 transition">
                                 Live View
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -244,8 +243,9 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 3h7m0 0v7m0-7L10 14" />
                                 </svg>
-                            </button>
+                            </a>
                         </div>
+
                     </div>
                     <!-- Tags -->
                     <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
@@ -296,10 +296,9 @@
                         <img src="./images/Lucent.png" alt="Project screenshot" class="w-full h-full object-cover" />
                         <!-- Hover Overlay with "Live View" Button -->
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
-            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button onclick="openDynamicModal(this)" data-title="Lucent Chandelier Web App - Preview"
-                                data-desktop-img="./images/BakesCookiesDesktop.gif"
-                                data-mobile-img="./images/BakesCookiesMobile.gif"
+            opacity-100 sm:opacity-0 sm:group-hover:opacity-100 
+            transition-opacity duration-300">
+                            <a href="https://astrocodemir.github.io/LucentChandelier/" target="_blank"
                                 class="bg-pink-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg hover:bg-pink-600 transition">
                                 Live View
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -307,7 +306,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 3h7m0 0v7m0-7L10 14" />
                                 </svg>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <!-- Tags -->
@@ -362,10 +361,9 @@
 
                         <!-- Hover Overlay with "Live View" Button -->
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
-            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button onclick="openDynamicModal(this)" data-title="Bakes Cookies Web App - Preview"
-                                data-desktop-img="./images/BakesCookiesDesktop.gif"
-                                data-mobile-img="./images/BakesCookiesMobile.gif"
+            opacity-100 sm:opacity-0 sm:group-hover:opacity-100 
+            transition-opacity duration-300">
+                            <a href="https://astrocodemir.github.io/BakesGoods-Cookies/" target="_blank"
                                 class="bg-pink-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg hover:bg-pink-600 transition">
                                 Live View
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -373,8 +371,9 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 3h7m0 0v7m0-7L10 14" />
                                 </svg>
-                            </button>
+                            </a>
                         </div>
+
                     </div>
 
                     <!-- Tags -->
@@ -405,79 +404,12 @@
             </div>
 
 
-            <!-- Reusable Modal -->
-            <div id="universalModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4">
-                <div class="bg-white text-black rounded-lg shadow-lg p-6 max-w-4xl w-full relative">
 
-                    <!-- Close Button -->
-                    <button onclick="closeModal('universalModal')"
-                        class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
 
-                    <!-- Step 1: Preview -->
-                    <div id="previewStep">
-                        <h2 id="modalTitle" class="text-2xl font-bold mb-6">Project Title - Live Preview</h2>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <!-- Desktop Preview -->
-                            <div class="flex flex-col items-center">
-                                <h3 class="text-lg font-semibold mb-2">Desktop Preview</h3>
-                                <div class="w-full h-64 border rounded-lg overflow-hidden shadow">
-                                    <img id="desktopPreviewImg" src="" alt="Desktop Preview"
-                                        class="w-full h-full object-cover" />
-                                </div>
-                            </div>
 
-                            <!-- Mobile Preview -->
-                            <div class="flex flex-col items-center">
-                                <h3 class="text-lg font-semibold mb-2">Mobile Preview</h3>
-                                <div class="w-full h-64 border rounded-lg overflow-hidden shadow">
-                                    <img id="mobilePreviewImg" src="" alt="Mobile Preview"
-                                        class="w-full h-full object-cover" />
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Inquiry Button -->
-                        <div class="flex justify-center">
-                            <button id="toInquiryBtn" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg shadow-lg 
-            flex items-center gap-2 text-lg transition">
-                                Inquiry
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 3h7m0 0v7m0-7L10 14" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
 
-                    <!-- Step 2: Inquiry Form (hidden by default) -->
-                    <div id="inquiryStep" class="hidden">
-                        <h2 class="text-2xl font-bold mb-6">Inquiry Form</h2>
-
-                        <form id="inquiryForm" class="space-y-4">
-                            <input type="text" name="name" placeholder="Your Name" required
-                                class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-                            <input type="email" name="email" placeholder="Your Email" required
-                                class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-                            <textarea name="message" placeholder="Your Message" rows="4" required
-                                class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-
-                            <div class="flex justify-between">
-                                <button type="button" id="backBtn"
-                                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded transition">
-                                    Back
-                                </button>
-                                <button type="submit"
-                                    class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded transition">
-                                    Send Inquiry
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
 
         </div>
     </section>
@@ -734,7 +666,7 @@
                     </svg><span class="sr-only">Facebook</span></a></div>
         </div>
     </footer>
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
