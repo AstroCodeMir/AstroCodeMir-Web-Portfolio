@@ -14,6 +14,8 @@
 
 <body>
     <!-- ## NAVIGATION ## -->
+ 
+    
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -37,10 +39,10 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#" class="text-sm/6 font-semibold text-white">About</a>
-                <a href="#Features" class="text-sm/6 font-semibold  text-white">Project</a>
+                <a href="#about" class="text-sm/6 font-semibold text-white">About</a>
+                <a href="#features" class="text-sm/6 font-semibold  text-white">Project</a>
                 <a href="#skills" class="text-sm/6 font-semibold  text-white">Skills</a>
-                <a href="#Contact" class="text-sm/6 font-semibold  text-white">Contact</a>
+                <a href="#contact" class="text-sm/6 font-semibold  text-white">Contact</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a href="#"
@@ -76,13 +78,13 @@
                         <div class="mt-6 flow-root">
                             <div class="-my-6 divide-y divide-gray-500/10">
                                 <div class="space-y-2 py-6">
-                                    <a href="#"
+                                    <a href="#about"
                                         class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About</a>
-                                    <a href="#Features"
+                                    <a href="#features"
                                         class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Project</a>
                                     <a href="#skills"
                                         class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Skills</a>
-                                    <a href="#Contact"
+                                    <a href="#contact"
                                         class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
                                 </div>
                                 <div class="py-6">
@@ -97,6 +99,7 @@
             </div>
         </div>
     </header>
+    <section class="cta"     6034768.jpg>
     <div class="relative isolate px-6 pt-14 lg:px-8">
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true">
@@ -134,10 +137,10 @@
          transition-all duration-700 ease-out
          delay-300">
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
+                        <a href="project.html"
                             class="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600">View
                             My Work</a>
-                        <a href="#" class="rounded-md border border-white/10
+                        <a href="#contact" class="rounded-md border border-white/10
          outline outline-1 outline-purple-500/40
          transition-[outline-color,background-color] duration-200 ease-in-out
          hover:outline-purple-500/80 hover:bg-purple-500
@@ -213,340 +216,343 @@
                 my projects for a deeper dive.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            <!-- Feature 1 -->
-            <div data-animate class="relative inline-block opacity-0 translate-y-5 
+                <!-- Feature 1 -->
+                <div data-animate class="relative inline-block opacity-0 translate-y-5 
             transition-all duration-700 ease-out delay-100">
-                <div class="relative p-10 rounded-xl border border-purple-500/30 
+                    <div class="relative p-10 rounded-xl border border-purple-500/30 
               outline outline-1 outline-purple-500/40
               bg-gray-900/80
               hover:outline-purple-500/80 hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
               transition-all duration-300 ease-in-out
               flex flex-col items-center text-center gap-4">
 
-                    <!-- Title -->
-                    <h3 class="text-2xl font-semibold text-purple-400 feature-title">
-                        Aly's Craft Web App
-                    </h3>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold text-purple-400 feature-title">
+                            Aly's Craft Web App
+                        </h3>
+                        <!-- Description -->
+                        <p class="text-base text-gray-300 feature-desc max-w-xs">
+                            A web landing page that showcases the Aly's Handmade Crafts
+                        </p>
+                        <!-- Image Container with Hover Overlay -->
+                        <div class="relative w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
+            transition-all duration-300 group">
 
-                    <!-- Description -->
-                    <p class="text-base text-gray-300 feature-desc max-w-xs">
-                        A web landing page that showcases the Aly's Handmade Crafts
-                    </p>
+                            <!-- Image -->
+                            <img src="../images/AlysWebApp.png" class="w-full h-full object-cover" />
 
-                    <!-- Image -->
-                    <div class="w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
-                transition-all duration-300">
-                       <img src="../images/AlysWebApp.png" alt="Alys Web App"
+                            <!-- Hover Overlay with "Live View" Button -->
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
+            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="openDynamicModal(this)" data-title="Aly's Craft - Preview"
+                                    data-desktop-img="../images/BakesCookiesDesktop.gif"
+                                    data-mobile-img="../images/BakesCookiesMobile.gif"
+                                    class="bg-pink-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg hover:bg-pink-600 transition">
+                                    Live View
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 3h7m0 0v7m0-7L10 14" />
+                                    </svg>
+                                </button>
+                            </div>
 
-                            class="w-full h-full object-cover" />
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Web Development
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                AI Integration
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                HTML5
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Tailwind
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                JavaScript
+                            </div>
+                        </div>
+
                     </div>
-
-                    <!-- Tags -->
-                    <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Web Development
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            AI Integration
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            HTML5
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Tailwind
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            JavaScript
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-            <!-- Feature 2 -->
-            <div data-animate class="relative inline-block opacity-0 translate-y-5 
+                <!-- Feature 2 -->
+                <div data-animate class="relative inline-block opacity-0 translate-y-5 
             transition-all duration-700 ease-out delay-300">
-                <div class="relative p-10 rounded-xl border border-purple-500/30 
+                    <div class="relative p-10 rounded-xl border border-purple-500/30 
               outline outline-1 outline-purple-500/40
               bg-gray-900/80
               hover:outline-purple-500/80 hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
               transition-all duration-300 ease-in-out
               flex flex-col items-center text-center gap-4">
 
-                    <!-- Title -->
-                    <h3 class="text-2xl font-semibold text-purple-400 feature-title">
-                        Lucent Chandelier 
-                    </h3>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold text-purple-400 feature-title">
+                            Lucent Chandelier
+                        </h3>
 
-                    <!-- Description -->
-                    <p class="text-base text-gray-300 feature-desc max-w-xs">
-                        A web landing page that showcases the Chandeliers.
-                    </p>
+                        <!-- Description -->
+                        <p class="text-base text-gray-300 feature-desc max-w-xs">
+                            A web landing page that showcases the Chandeliers.
+                        </p>
+                        <!-- Image Container with Hover Overlay -->
+                        <div class="relative w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
+            transition-all duration-300 group">
 
-                    <!-- Image -->
-                    <div class="w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
-                transition-all duration-300">
-                        <img src="../images/Lucent.png" alt="Project screenshot"
-                            class="w-full h-full object-cover" />
+                            <!-- Image -->
+                            <img src="../images/Lucent.png" alt="Project screenshot"
+                                class="w-full h-full object-cover" />
+
+                            <!-- Hover Overlay with "Live View" Button -->
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
+            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="openDynamicModal(this)"
+                                    data-title="Lucent Chandelier Web App - Preview"
+                                    data-desktop-img="../images/BakesCookiesDesktop.gif"
+                                    data-mobile-img="../images/BakesCookiesMobile.gif"
+                                    class="bg-pink-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg hover:bg-pink-600 transition">
+                                    Live View
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 3h7m0 0v7m0-7L10 14" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Web Development
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                JavaScript
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                HTML5
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Tailwind
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Flowbite JS
+                            </div>
+                        </div>
+
                     </div>
-
-                    <!-- Tags -->
-                    <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Web Development
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            JavaScript
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            HTML5
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Tailwind
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Flowbite JS
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-            <!-- Feature 3 -->
-            <div data-animate class="relative inline-block opacity-0 translate-y-5 
+                <!-- Feature 3 -->
+                <div data-animate class="relative inline-block opacity-0 translate-y-5 
             transition-all duration-700 ease-out delay-500">
-                <div class="relative p-10 rounded-xl border border-purple-500/30 
+                    <div class="relative p-10 rounded-xl border border-purple-500/30 
               outline outline-1 outline-purple-500/40
               bg-gray-900/80
               hover:outline-purple-500/80 hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
               transition-all duration-300 ease-in-out
               flex flex-col items-center text-center gap-4">
 
-                    <!-- Title -->
-                    <h3 class="text-2xl font-semibold text-purple-400 feature-title">
-                        Bakes Cookies
-                    </h3>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold text-purple-400 feature-title">
+                            Bakes Cookies
+                        </h3>
 
-                    <!-- Description -->
-                    <p class="text-base text-gray-300 feature-desc max-w-xs">
-                        Showcase of the Cookies Bakes from home to yours.
-                    </p>
+                        <!-- Description -->
+                        <p class="text-base text-gray-300 feature-desc max-w-xs">
+                            Showcase of the Cookies Bakes from home to yours.
+                        </p>
 
-                    <!-- Image -->
-                    <div class="w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
-                transition-all duration-300">
-                        <img src="../images/BakesCookies.png"
-                            class="w-full h-full object-cover" />
+                        <!-- Image Container with Hover Overlay -->
+                        <div class="relative w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
+            transition-all duration-300 group">
+
+                            <!-- Image -->
+                            <img src="../images/BakesCookies.png" alt="Project screenshot"
+                                class="w-full h-full object-cover" />
+
+                            <!-- Hover Overlay with "Live View" Button -->
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
+            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="openDynamicModal(this)" data-title="Bakes Cookies Web App - Preview"
+                                    data-desktop-img="../images/BakesCookiesDesktop.gif"
+                                    data-mobile-img="../images/BakesCookiesMobile.gif"
+                                    class="bg-pink-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg hover:bg-pink-600 transition">
+                                    Live View
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 3h7m0 0v7m0-7L10 14" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Web Development
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                AI Integration
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                GCP
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Gemini API
+                            </div>
+                            <div class="inline-flex items-center rounded-full border border-purple-500/70 
+                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
+                                Full-Stack
+                            </div>
+                        </div>
+
                     </div>
-
-                    <!-- Tags -->
-                    <div class="items-center flex flex-wrap justify-center gap-2 pt-4">
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Web Development
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            AI Integration
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            GCP
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Gemini API
-                        </div>
-                        <div class="inline-flex items-center rounded-full border border-purple-500/70 
-                  px-3 py-1 text-xs font-semibold text-purple-400 transition-all duration-300">
-                            Full-Stack
-                        </div>
-                    </div>
-
                 </div>
+
+
+                <!-- Reusable Modal -->
+                <div id="universalModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4">
+                    <div class="bg-white text-black rounded-lg shadow-lg p-6 max-w-4xl w-full relative">
+
+                        <!-- Close Button -->
+                        <button onclick="closeModal('universalModal')"
+                            class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
+
+                        <!-- Step 1: Preview -->
+                        <div id="previewStep">
+                            <h2 id="modalTitle" class="text-2xl font-bold mb-6">Project Title - Live Preview</h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <!-- Desktop Preview -->
+                                <div class="flex flex-col items-center">
+                                    <h3 class="text-lg font-semibold mb-2">Desktop Preview</h3>
+                                    <div class="w-full h-64 border rounded-lg overflow-hidden shadow">
+                                        <img id="desktopPreviewImg" src="" alt="Desktop Preview"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Preview -->
+                                <div class="flex flex-col items-center">
+                                    <h3 class="text-lg font-semibold mb-2">Mobile Preview</h3>
+                                    <div class="w-full h-64 border rounded-lg overflow-hidden shadow">
+                                        <img id="mobilePreviewImg" src="" alt="Mobile Preview"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Inquiry Button -->
+                            <div class="flex justify-center">
+                                <button id="toInquiryBtn" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg shadow-lg 
+            flex items-center gap-2 text-lg transition">
+                                    Inquiry
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 3h7m0 0v7m0-7L10 14" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Inquiry Form (hidden by default) -->
+                        <div id="inquiryStep" class="hidden">
+                            <h2 class="text-2xl font-bold mb-6">Inquiry Form</h2>
+
+                            <form id="inquiryForm" class="space-y-4">
+                                <input type="text" name="name" placeholder="Your Name" required
+                                    class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                                <input type="email" name="email" placeholder="Your Email" required
+                                    class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                                <textarea name="message" placeholder="Your Message" rows="4" required
+                                    class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+
+                                <div class="flex justify-between">
+                                    <button type="button" id="backBtn"
+                                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded transition">
+                                        Back
+                                    </button>
+                                    <button type="submit"
+                                        class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded transition">
+                                        Send Inquiry
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-    <!-- See More Button -->
-    <div class="col-span-full flex justify-center mt-6">
-        <a href="project.html?load=true">
-            <button id="seeMoreText" 
-                class="bg-pink-500 text-white px-4 py-2 rounded flex items-center justify-center">
-                See more
-            </button>
-        </a>
-    </div>
-</div>
     </section>
-             
-                
+
+
 
 
     <!-- ## SKILLS ## -->
-    <div class="relative isolate px-6 pt-14 lg:px-8 relative inline-block
-         opacity-0 translate-y-5
-         transition-all duration-700 ease-out
-         delay-100
-  ">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-            </div>
-        </div>
+
+<section id="skills">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
+      My Skills
+    </h2>
+    <div class="flex flex-wrap justify-center gap-10">
+      <!-- Skill Item -->
+      <div class="flex flex-col items-center">
+        <img src="../images/HTML.png" alt="HTML" class="w-14 h-14 mb-2">
+        <span class="text-white">HTML</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/CSS.png" alt="CSS" class="w-14 h-14 mb-2">
+        <span class="text-white">CSS</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/JS.png" alt="JavaScript" class="w-14 h-14 mb-2">
+        <span class="text-white">JavaScript</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/tailwind_css.png" alt="Tailwind CSS" class="w-14 h-14 mb-2">
+        <span class="text-white">Tailwind CSS</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/bootstrap_5968672.png" alt="Bootstrap" class="w-14 h-14 mb-2">
+        <span class="text-white">Bootstrap</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/git.png" alt="Git" class="w-14 h-14 mb-2">
+        <span class="text-white">Git</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/npm.png" alt="Npm" class="w-14 h-14 mb-2">
+        <span class="text-white">Node Package Manager</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="../images/figma.png" alt="Figma" class="w-14 h-14 mb-2">
+        <span class="text-white">Figma</span>
+      </div>
     </div>
-    <section id="skills"
-        class="container max-w-6xl mx-auto py-12 md:py-20 bg-secondary/50 rounded-lg my-12 text-white px-4 md:px-8">
-        <!-- Heading -->
-        <div class="text-center">
-            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">My Skillset</h2>
-            <p class="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-                A combination of technical expertise and creative finesse to deliver outstanding results.
-            </p>
-        </div>
-
-        <!-- Skills Grid -->
-        <div class="mt-12 grid gap-12 sm:grid-cols-1 md:grid-cols-2">
-
-            <!-- Technical Skills -->
-            <div>
-                <h3 class="text-2xl font-semibold mb-6 text-center md:text-left">Technical Skills</h3>
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">HTML & CSS</span>
-                            <span class="text-sm font-medium text-primary">95%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-500 progress-bar" data-progress="95"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">JavaScript</span>
-                            <span class="text-sm font-medium text-primary">90%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="90"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Node.js & Express.js</span>
-                            <span class="text-sm font-medium text-primary">85%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="85"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Github & Version Control</span>
-                            <span class="text-sm font-medium text-primary">90%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="90"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Figma</span>
-                            <span class="text-sm font-medium text-primary">85%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="85"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Adobe Suite</span>
-                            <span class="text-sm font-medium text-primary">75%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="75"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Soft Skills -->
-            <div>
-                <h3 class="text-2xl font-semibold mb-6 text-center md:text-left">Soft Skills</h3>
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Communication</span>
-                            <span class="text-sm font-medium text-primary">95%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="95"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Teamwork</span>
-                            <span class="text-sm font-medium text-primary">90%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="90"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Problem Solving</span>
-                            <span class="text-sm font-medium text-primary">85%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="85"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Creativity</span>
-                            <span class="text-sm font-medium text-primary">95%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="95"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Adaptability</span>
-                            <span class="text-sm font-medium text-primary">80%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="80"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex flex-wrap justify-between items-center mb-1">
-                            <span class="text-base font-medium text-foreground">Leadership</span>
-                            <span class="text-sm font-medium text-primary">75%</span>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-full bg-secondary h-2">
-                            <div class="h-full bg-purple-600 progress-bar" data-progress="75"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </div>
+</section>
 
     <!-- ## CONTACT ## -->
     <section id="Contact" class="opacity-0 translate-y-5 opacity-100 translate-y-0 duration-700 ease-out py-20 px-4"
