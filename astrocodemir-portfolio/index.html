@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,11 @@
     <title>AstroCodeMir</title>
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='1em' font-size='80'%3E🌸%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body class="bg-black text-white">
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 lg:px-8 sm:px-4" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -95,12 +95,23 @@
         </div>
     </header>
     <div class="relative isolate px-6 pt-14 lg:px-8">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-            </div>
-        </div>
+       <div
+  class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+  aria-hidden="true"
+>
+  <div
+    class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff4d6d] to-[#6a5cff] opacity-60 sm:left-[calc(50%-30rem)] sm:w-[72rem] animate-blob"
+    style="clip-path: polygon(
+      74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 
+      85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 
+      60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 
+      45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 
+      17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 
+      74.1% 44.1%
+    )"
+  ></div>
+</div>
+
         <div class="mx-auto max-w-xl py-32 sm:py-32 lg:py-36">
             <div class="hidden sm:mb-8 sm:flex sm:justify-center">
             </div>
@@ -190,6 +201,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Space Dust Background -->
+<div class="absolute inset-0 -z-20 overflow-hidden bg-black">
+  <!-- Generate multiple stars -->
+<!-- Extra Stars -->
+<div class="absolute top-[10%] left-[15%] w-1 h-1 bg-white rounded-full animate-twinkle delay-300"></div>
+<div class="absolute top-[20%] left-[70%] w-1.5 h-1.5 bg-gray-200 rounded-full animate-twinkle delay-800"></div>
+<div class="absolute top-[35%] left-[40%] w-0.5 h-0.5 bg-white rounded-full animate-twinkle delay-1200"></div>
+<div class="absolute top-[45%] left-[80%] w-1 h-1 bg-blue-200 rounded-full animate-twinkle delay-2000"></div>
+<div class="absolute top-[60%] left-[25%] w-1 h-1 bg-purple-200 rounded-full animate-twinkle delay-900"></div>
+<div class="absolute top-[75%] left-[60%] w-1.5 h-1.5 bg-white rounded-full animate-twinkle delay-400"></div>
+<div class="absolute top-[85%] left-[10%] w-1 h-1 bg-gray-300 rounded-full animate-twinkle delay-1600"></div>
+<div class="absolute top-[90%] left-[50%] w-0.5 h-0.5 bg-white rounded-full animate-twinkle delay-600"></div>
+<div class="absolute top-[95%] left-[80%] w-1 h-1 bg-pink-200 rounded-full animate-twinkle delay-1300"></div>
+<div class="absolute top-[5%] left-[90%] w-1 h-1 bg-white rounded-full animate-twinkle delay-1000"></div>
+
+  
+  <!-- add as many stars as you want -->
+</div>
     <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true">
         <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
@@ -229,7 +259,7 @@
                     <div class="relative w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
             transition-all duration-300 group">
                         <!-- Image -->
-                        <img src="./images/AlysWebApp.png" class="w-full h-full object-cover" />
+                        <img src="/src/images/AlysWebApp.png" class="w-full h-full object-cover" />
                         <!-- Hover Overlay with "Live View" Button -->
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
             opacity-100 sm:opacity-0 sm:group-hover:opacity-100 
@@ -292,7 +322,7 @@
                     <div class="relative w-80 h-40 rounded-xl overflow-hidden border border-purple-500/40 
             transition-all duration-300 group">
                         <!-- Image -->
-                        <img src="./images/Lucent.png" alt="Project screenshot" class="w-full h-full object-cover" />
+                        <img src="/src/images/Lucent.png" alt="Project screenshot" class="w-full h-full object-cover" />
                         <!-- Hover Overlay with "Live View" Button -->
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center 
             opacity-100 sm:opacity-0 sm:group-hover:opacity-100 
@@ -355,7 +385,7 @@
             transition-all duration-300 group">
 
                         <!-- Image -->
-                        <img src="./images/BakesCookies.png" alt="Project screenshot"
+                        <img src="/src/images/BakesCookies.png" alt="Project screenshot"
                             class="w-full h-full object-cover" />
 
                         <!-- Hover Overlay with "Live View" Button -->
@@ -421,49 +451,49 @@
             <!-- Skill Item -->
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/HTML.png" alt="HTML" class="w-14 h-14 mb-2">
+                    <img src="/src/images/HTML.png" alt="HTML" class="w-14 h-14 mb-2">
                     <span class="text-white">HTML</span>
                 </div>
             </div>
 
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/CSS.png" alt="CSS" class="w-14 h-14 mb-2">
+                    <img src="/src/images/CSS.png" alt="CSS" class="w-14 h-14 mb-2">
                     <span class="text-white">CSS</span>
                 </div>
             </div>
 
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/JS.png" alt="JavaScript" class="w-14 h-14 mb-2">
+                    <img src="/src/images/JS.png" alt="JavaScript" class="w-14 h-14 mb-2">
                     <span class="text-white">JavaScript</span>
                 </div>
             </div>
 
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/tailwind_css.png" alt="Tailwind CSS" class="w-14 h-14 mb-2">
+                    <img src="/src/images/tailwind_css.png" alt="Tailwind CSS" class="w-14 h-14 mb-2">
                     <span class="text-white">Tailwind CSS</span>
                 </div>
             </div>
 
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/bootstrap_5968672.png" alt="Bootstrap" class="w-14 h-14 mb-2">
+                    <img src="/src/images/bootstrap_5968672.png" alt="Bootstrap" class="w-14 h-14 mb-2">
                     <span class="text-white">Bootstrap</span>
                 </div>
             </div>
 
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/git.png" alt="Git" class="w-14 h-14 mb-2">
+                    <img src="/src/images/git.png" alt="Git" class="w-14 h-14 mb-2">
                     <span class="text-white">Git</span>
                 </div>
             </div>
 
             <div data-animate class="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100">
                 <div class="flex flex-col items-center">
-                    <img src="./images/figma.png" alt="Figma" class="w-14 h-14 mb-2">
+                    <img src="/src/images/figma.png" alt="Figma" class="w-14 h-14 mb-2">
                     <span class="text-white">Figma</span>
                 </div>
             </div>
@@ -684,7 +714,7 @@
                     </svg><span class="sr-only">Facebook</span></a></div>
         </div>
     </footer>
-   <script type="module" src="/src/app.js"></script>
+   <script type="module" src="./src/app.js"></script>
 </body>
 
 </html>
