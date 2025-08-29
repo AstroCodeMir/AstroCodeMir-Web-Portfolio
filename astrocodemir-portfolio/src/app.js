@@ -1,3 +1,5 @@
+import './input.css'
+
 document.addEventListener('DOMContentLoaded', () => {
   // ——— Fade & Animate Items ———
   const animateItems = document.querySelectorAll('[data-animate]');
