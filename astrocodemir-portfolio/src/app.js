@@ -44,21 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
 const wrapper = document.getElementById('mobile-menu-wrapper');
 const openBtn = document.getElementById('open-menu-btn');
 const closeBtn = document.getElementById('close-menu-btn');
+const panel = document.getElementById('mobile-menu-panel');
 
-openBtn?.addEventListener('click', () => {
-  wrapper.classList.remove('hidden'); // show immediately
+openBtn?.addEventListener('click', e => {
+  e.stopPropagation();
+  wrapper.classList.remove('hidden');
+  openBtn.classList.add('hidden'); // Hide hamburger
 });
 
-closeBtn?.addEventListener('click', () => {
-  wrapper.classList.add('hidden'); // hide the menu
+closeBtn?.addEventListener('click', e => {
+  e.stopPropagation();
+  wrapper.classList.add('hidden');
+  openBtn.classList.remove('hidden'); // Show hamburger
 });
 
-// Close when clicking outside panel
+// Optional: click outside panel to close
 wrapper?.addEventListener('click', e => {
   if (e.target === wrapper) {
     wrapper.classList.add('hidden');
+    openBtn.classList.remove('hidden');
   }
 });
+
 
 
 
