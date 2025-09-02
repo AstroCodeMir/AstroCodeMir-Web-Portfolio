@@ -41,46 +41,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ——— Mobile Menu Toggle ———
-  const wrapper = document.getElementById('mobile-menu-wrapper');
-  const openBtn = document.getElementById('open-menu-btn');
-  const closeBtn = document.getElementById('close-menu-btn');
-  const backdrop = wrapper?.querySelector('.fixed.inset-0');
-  const panel = wrapper?.querySelector('.fixed.inset-y-0');
+const wrapper = document.getElementById('mobile-menu-wrapper');
+const openBtn = document.getElementById('open-menu-btn');
+const closeBtn = document.getElementById('close-menu-btn');
 
-  openBtn?.addEventListener('click', e => {
-    e.stopPropagation();
-    wrapper.classList.remove('hidden', 'translate-x-full');
-    wrapper.classList.add('translate-x-0');
-  });
+openBtn?.addEventListener('click', () => {
+  wrapper.classList.remove('hidden'); // show immediately
+});
 
-  closeBtn?.addEventListener('click', e => {
-    e.stopPropagation();
-    wrapper.classList.remove('translate-x-0');
-    wrapper.classList.add('translate-x-full');
-    setTimeout(() => wrapper.classList.add('hidden'), 300);
-  });
+closeBtn?.addEventListener('click', () => {
+  wrapper.classList.add('hidden'); // hide the menu
+});
 
-  panel?.addEventListener('click', e => {
-    e.stopPropagation();
-  });
+// Close when clicking outside panel
+wrapper?.addEventListener('click', e => {
+  if (e.target === wrapper) {
+    wrapper.classList.add('hidden');
+  }
+});
 
-  backdrop?.addEventListener('click', () => {
-    wrapper.classList.remove('translate-x-0');
-    wrapper.classList.add('translate-x-full');
-    setTimeout(() => wrapper.classList.add('hidden'), 300);
-  });
 
-  document.addEventListener('click', e => {
-    if (
-      !wrapper?.classList.contains('hidden') &&
-      !wrapper?.contains(e.target) &&
-      !openBtn?.contains(e.target)
-    ) {
-      wrapper.classList.remove('translate-x-0');
-      wrapper.classList.add('translate-x-full');
-      setTimeout(() => wrapper.classList.add('hidden'), 300);
-    }
-  });
+
+
+
 
   // ——— Social Icons Initialization ———
   const socials = [
