@@ -72,3 +72,28 @@
 .vercel-glow:hover {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
 }
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between dot and text */
+  font-weight: 600;
+  color: #d8b4fe; /* same as your text-purple-200 */
+  position: relative;
+}
+
+.project-title::before {
+  content: "";
+  width: 0.75rem;   /* size of dot */
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Progress colors */
+.project-title.ongoing::before {
+  background-color: #facc15; /* yellow-400 */
+}
+
+.project-title.completed::before {
+  background-color: #22c55e; /* green-500 */
+}
