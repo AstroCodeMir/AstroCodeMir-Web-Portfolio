@@ -4,28 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AstroCodeMir Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes blob {
-      0% {
-        border-radius: 42% 58% 70% 30% / 42% 30% 70% 58%;
-        transform: translate(-50%, -10px) scale(1);
-      }
-      50% {
-        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
-        transform: translate(-50%, 10px) scale(1.02);
-      }
-      100% {
-        border-radius: 42% 58% 70% 30% / 42% 30% 70% 58%;
-        transform: translate(-50%, -10px) scale(1);
-      }
-    }
-    .animate-blob {
-      animation: blob 25s infinite ease-in-out;
-    }
-  </style>
+  <link rel="stylesheet" href="./dist/output.css">
 </head>
 <body class="bg-black text-white font-sans relative">
+      <!-- Space Dust Background -->
+<div class="absolute inset-0 -z-20 overflow-hidden bg-black">
+  <!-- Generate multiple stars -->
+<!-- Extra Stars -->
+<div class="absolute top-[10%] left-[15%] w-1 h-1 bg-white rounded-full animate-twinkle delay-300"></div>
+<div class="absolute top-[20%] left-[70%] w-1.5 h-1.5 bg-gray-200 rounded-full animate-twinkle delay-800"></div>
+<div class="absolute top-[35%] left-[40%] w-0.5 h-0.5 bg-white rounded-full animate-twinkle delay-1200"></div>
+<div class="absolute top-[45%] left-[80%] w-1 h-1 bg-blue-200 rounded-full animate-twinkle delay-2000"></div>
+<div class="absolute top-[60%] left-[25%] w-1 h-1 bg-purple-200 rounded-full animate-twinkle delay-900"></div>
+<div class="absolute top-[75%] left-[60%] w-1.5 h-1.5 bg-white rounded-full animate-twinkle delay-400"></div>
+<div class="absolute top-[85%] left-[10%] w-1 h-1 bg-gray-300 rounded-full animate-twinkle delay-1600"></div>
+<div class="absolute top-[90%] left-[50%] w-0.5 h-0.5 bg-white rounded-full animate-twinkle delay-600"></div>
+<div class="absolute top-[95%] left-[80%] w-1 h-1 bg-pink-200 rounded-full animate-twinkle delay-1300"></div>
+<div class="absolute top-[5%] left-[90%] w-1 h-1 bg-white rounded-full animate-twinkle delay-1000"></div>
+
+  
+  <!-- add as many stars as you want -->
+</div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
         <header class="absolute inset-x-0 top-0 z-50">
         <nav class="flex items-center justify-between p-6 lg:px-8 sm:px-4" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -50,7 +55,7 @@
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="about.html" class="text-sm/6 font-semibold text-white">About</a>
-                <a href="#features" class="text-sm/6 font-semibold  text-white">Project</a>
+                <a href="index.html#features" class="text-sm/6 font-semibold  text-white">Project</a>
                 <a href="#skills" class="text-sm/6 font-semibold  text-white">Skills</a>
                 <a href="#contact" class="text-sm/6 font-semibold  text-white">Contact</a>
             </div>
