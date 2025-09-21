@@ -72,6 +72,27 @@
 .vercel-glow:hover {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
 }
+
+/* Individual colors */
+.sequelize-glow {
+   filter: drop-shadow(0 0 4px rgba(38, 77, 228, 0.6)); /* Blue */
+}
+.sequelize-glow:hover {
+  filter: drop-shadow(0 0 12px rgba(52, 152, 219, 0.8)); /* Blue */
+}
+.mysql-glow {
+   filter: drop-shadow(0 0 4px rgba(240, 219, 79, 0.6)); /* Yellow-ish MySQL dolphin color */
+}
+.mysql-glow:hover {
+  filter: drop-shadow(0 0 12px rgba(255, 195, 0, 0.8)); /* Yellow-ish MySQL dolphin color */
+}
+.express-glow {
+  filter: drop-shadow(0 0 12px rgba(200, 200, 200, 0.6));
+  }
+.express-glow:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
+}
+
 .project-title {
   display: flex;
   align-items: center;
