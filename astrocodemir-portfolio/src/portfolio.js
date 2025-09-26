@@ -1,5 +1,6 @@
 // portfolio.js
 
+
 // --- TAB SWITCHING ---
 function changeTab(event, tabId) {
   const allTabs = document.querySelectorAll(".tab-content");
@@ -23,11 +24,8 @@ function changeTab(event, tabId) {
   currentBtn.classList.remove("text-gray-500", "hover:text-gray-300");
 }
 
-
-
-
-
-
+// 👇 expose to global scope so inline HTML onclick can access it
+window.changeTab = changeTab;
 
 // --- IMAGE SLIDER ---
 function initSliders() {
