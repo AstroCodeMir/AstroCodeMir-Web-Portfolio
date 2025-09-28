@@ -61,6 +61,58 @@ function initSliders() {
     });
 }
 
+// Modal
+(function () {
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) {
+      console.warn(`openModal: element #${id} not found`);
+      return;
+    }
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+    modal.setAttribute('aria-hidden', 'false');
+
+    // focus first focusable element inside modal (close button if present)
+    const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (focusable) focusable.focus();
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+    document.body.style.overflow = ''; // restore scroll
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  // Close on ESC and click outside (backdrop) for any modal with .modal class
+  document.addEventListener('DOMContentLoaded', () => {
+    // close when pressing Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.flex').forEach(m => closeModal(m.id));
+      }
+    });
+
+    // close when clicking the backdrop (requires modal container to have class "modal")
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal(modal.id);
+      });
+    });
+  });
+
+  // expose to global for inline onclick handlers
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+})();
+
+
+
+
 // --- INIT ---
 document.addEventListener("DOMContentLoaded", () => {
     initSliders();
