@@ -7,8 +7,6 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="opacity-0 translate-y-5 opacity-100 translate-y-0 duration-700 ease-out py-20 px-4"
-      data-animate
     >
       <div className="text-center">
         <h2 className="text-3xl text-white font-bold tracking-tighter sm:text-4xl font-headline">
@@ -24,11 +22,8 @@ const Contact: React.FC = () => {
       {/* Grid of contact cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mt-12">
         {/* Email */}
-        <div
-          data-animate
-          className="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100"
-        >
-          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2 transition-all duration-200 ease-in-out">
+        <div>
+          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2">
             <div className="flex flex-col space-y-1.5 p-6 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +60,8 @@ const Contact: React.FC = () => {
         </div>
 
         {/* LinkedIn */}
-        <div
-          data-animate
-          className="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-200"
-        >
-          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2 transition-all duration-200 ease-in-out">
+        <div>
+          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2">
             <div className="flex flex-col space-y-1.5 p-6 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,11 +97,8 @@ const Contact: React.FC = () => {
         </div>
 
         {/* GitHub */}
-        <div
-          data-animate
-          className="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-300"
-        >
-          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2 transition-all duration-200 ease-in-out">
+        <div>
+          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2 ">
             <div className="flex flex-col space-y-1.5 p-6 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -144,11 +133,8 @@ const Contact: React.FC = () => {
         </div>
 
         {/* WhatsApp */}
-        <div
-          data-animate
-          className="relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-400"
-        >
-          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2 transition-all duration-200 ease-in-out">
+        <div>
+          <div className="rounded-lg border border-[#A855F7]/70 text-card-foreground shadow-sm h-full flex flex-col justify-between text-center bg-card outline-none outline outline-1 outline-purple-400 hover:outline-purple-500 hover:shadow-purple-500/40 hover:shadow-lg focus:outline-purple-400 focus:outline-2 focus:outline-offset-2 ">
             <div className="flex flex-col space-y-1.5 p-6 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
