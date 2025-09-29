@@ -2,6 +2,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface Skill {
   name: string;
@@ -31,10 +32,7 @@ const Skills: React.FC = () => {
     <section id="skills">
       <div className="max-w-6xl mx-auto px-6">
         {/* Title */}
-        <div
-          data-animate
-          className="relative block w-full opacity-0 translate-y-5 transition-all duration-700 ease-out delay-100"
-        >
+        <div className="relative block w-full">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
             My Skills
           </h2>
@@ -43,19 +41,15 @@ const Skills: React.FC = () => {
 
       {/* Skills Grid */}
       <div className="flex flex-wrap justify-center gap-10">
-        {skills.map((skill, index) => (
-          <div
-            key={skill.name}
-            data-animate
-            className={`relative inline-block opacity-0 translate-y-5 transition-all duration-700 ease-out delay-${
-              100 + index * 100
-            }`}
-          >
+        {skills.map((skill) => (
+          <div key={skill.name} className="relative inline-block">
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src={skill.img}
                 alt={skill.alt}
-                className={`w-14 h-14 mb-2 icon-glow ${skill.glowClass || ""}`}
+                width={56}
+                height={56}
+                className={`mb-2 icon-glow ${skill.glowClass || ""}`}
               />
               <span className="text-white">{skill.name}</span>
             </div>
