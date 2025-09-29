@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Hero() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -39,12 +40,16 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="mt-8">
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/portfolio"
-                className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
-              >
-                View My Work
-              </a>
+              
+
+
+<Link
+  href="/projectCollection"
+  className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+>
+  View My Work 
+</Link>
+
               <a
                 href="#contact"
                 className="rounded-md border border-white/10 outline outline-1 outline-purple-500/40 transition-[outline-color,background-color] duration-200 ease-in-out hover:outline-purple-500/80 hover:bg-purple-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg focus-visible:outline-indigo-500 focus-visible:outline-1 focus-visible:outline-offset-2"
