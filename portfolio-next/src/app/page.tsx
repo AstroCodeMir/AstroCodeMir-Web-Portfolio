@@ -7,13 +7,15 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <>
+    
+    <main className="space-y-24">
       <Header />
       <Hero />
       <Projects />
       <Skills />
       <Contact />
       <Footer />
-    </>
+      </main>
+    
   );
 }

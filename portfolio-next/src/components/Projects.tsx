@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section
       id="features"
-      className="text-white py-20 px-4"
+      className="bg-transparent text-white"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
         <div
