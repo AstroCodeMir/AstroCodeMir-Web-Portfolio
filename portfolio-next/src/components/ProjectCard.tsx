@@ -27,8 +27,10 @@ export default function ProjectCard({ title, description, images, link }: Projec
   }, [hovered, images.length]);
 
   const handleMouseEnter = () => {
-    setHovered(true);
-    setCurrentIndex(0); // start from the first image
+    if (images.length > 1) {
+      setHovered(true);
+      setCurrentIndex(0); // start from the first image
+    }
   };
 
   const handleMouseLeave = () => {
@@ -42,30 +44,41 @@ export default function ProjectCard({ title, description, images, link }: Projec
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Image Slider */}
+      {/* Image Area */}
       <div className="relative w-full h-60 sm:h-64 lg:h-60 overflow-hidden">
-        <div
-          className="flex transition-transform duration-[1000ms] ease-in-out"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
-            width: `${100 * images.length}%`,
-          }}
-        >
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className="h-60 sm:h-64 lg:h-60 relative flex-shrink-0"
-              style={{ width: `${100 / images.length}%` }}
-            >
-              <Image
-                src={img}
-                alt={`${title} mockup ${index + 1}`}
-                fill
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </div>
+        {images.length === 1 ? (
+          // ✅ Just one image, no slider
+          <Image
+            src={images[0]}
+            alt={`${title} mockup`}
+            fill
+            className="object-contain"
+          />
+        ) : (
+          // ✅ Multiple images, enable slider
+          <div
+            className="flex transition-transform duration-[1000ms] ease-in-out"
+            style={{
+              transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
+              width: `${100 * images.length}%`,
+            }}
+          >
+            {images.map((img, index) => (
+              <div
+                key={index}
+                className="h-60 sm:h-64 lg:h-60 relative flex-shrink-0"
+                style={{ width: `${100 / images.length}%` }}
+              >
+                <Image
+                  src={img}
+                  alt={`${title} mockup ${index + 1}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Card Content */}
