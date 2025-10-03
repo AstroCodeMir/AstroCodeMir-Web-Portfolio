@@ -1,7 +1,8 @@
-"use client";
+
 
 import { useState } from "react";
 import Background from "../../components/Background";
+import ProjectGrid from "../../components/ProjectGrid";
 
 export default function ProjectCollection() {
   const [activeTab, setActiveTab] = useState("web-dev");
@@ -12,7 +13,43 @@ export default function ProjectCollection() {
     { id: "research", label: "Research & Development" },
     { id: "others", label: "Others" },
   ];
-
+  const webDevProjects = [
+  {
+    id: "web1",
+    title: "Daily-Dash",
+    description: "A dashboard project with e-commerce solution, users, and admin features with a modern, responsive user interface and a back-end. (Ongoing)",
+    images: ["/dash/DL001.png", "/dash/DL002.png", "/dash/DL003.png", "/dash/DL004.png"],
+    link: "#",
+  },
+  {
+    id: "web2",
+    title: "Aly's Craft",
+    description: "Mobile-responsive project currently being migrated to another deployment app. (Ongoing).",
+    images: ["/alys/AC001.png", "/alys/AC002.png", "/alys/AC003.png", "/alys/AC004.png"],
+    link: "#",
+  },
+    {
+    id: "web3",
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing projects, skills, and experience with a clean and modern design.",
+    images: ["/portfolio/AS001.png", "/portfolio/AS002.png", "/portfolio/AS003.png", "/portfolio/AS004.png"],
+    link: "#",
+  },
+    {
+    id: "web4",
+    title: "Lucent Chandelier",
+    description: "Completed showcase website for various chandelier lights. Fully mobile-responsive.",
+    images: ["/lucent/LC001.png", "/lucent/LC002.png", "/lucent/LC003.png", "/lucent/LC004.png"],
+    link: "#",
+  },
+      {
+    id: "web5",
+    title: "Baked Cookies",
+    description: "Completed project with a mini responsive cart system. Fully mobile-responsive..",
+    images: ["/baked/BC001.png", "/baked/BC002.png", "/baked/BC003.png", "/baked/BC004.png"],
+    link: "#",
+  },
+];
   return (
     <div className="relative">
       {/* Background (Reusable) */}
@@ -56,11 +93,12 @@ export default function ProjectCollection() {
 
           {/* Tab Content */}
           <div className="mt-6 text-white text-center">
-            {activeTab === "web-dev" && <div>🌐 Web Development Content Here</div>}
+              {activeTab === "web-dev" && <ProjectGrid projects={webDevProjects} />}
             {activeTab === "docs" && <div>📄 Documentation & Templates Content</div>}
             {activeTab === "research" && <div>🔬 Research & Development Content</div>}
             {activeTab === "others" && <div>🗂️ Other Content Here</div>}
           </div>
+          
         </div>
       </main>
     </div>
