@@ -16,10 +16,13 @@ export default function ProjectDetail() {
 
   return (
     <div className="max-w-3xl mx-auto pt-28 pb-16 text-white">
-      {/* Numbering */}
-      <span className="text-sm text-gray-400">
-        Project {currentIndex + 1} of {projects.length}
-      </span>
+      {/* 🔙 Back Button */}
+      <button
+        onClick={() => router.push("/projectCollection")}
+        className="mb-6 inline-flex items-center text-sm text-gray-300 hover:text-pink-400 transition-colors"
+      >
+        ← Back to Projects
+      </button>
 
       {/* Title */}
       <h1 className="text-3xl font-bold text-pink-400 mb-4">
@@ -74,44 +77,27 @@ export default function ProjectDetail() {
       </div>
 
       {/* Numbered Navigation */}
-      <div className="flex gap-2 mt-6">
-        {projects.map((p, index) => (
-          <button
-            key={p.id}
-            onClick={() => router.push(`/projectCollection/${p.id}`)}
-            className={`px-3 py-1 rounded ${
-              index === currentIndex
-                ? "bg-pink-500 text-white"
-                : "bg-gray-700 hover:bg-gray-600 text-gray-200"
-            }`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      <div className="flex flex-col items-center gap-3 mt-6">
+        <div className="flex gap-2">
+          {projects.map((p, index) => (
+            <button
+              key={p.id}
+              onClick={() => router.push(`/projectCollection/${p.id}`)}
+              className={`px-3 py-1 rounded ${
+                index === currentIndex
+                  ? "bg-pink-500 text-white"
+                  : "bg-gray-700 hover:bg-gray-600 text-gray-200"
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
 
-      {/* Prev / Next */}
-      <div className="flex justify-between mt-6">
-        {currentIndex > 0 && (
-          <button
-            onClick={() =>
-              router.push(`/projectCollection/${projects[currentIndex - 1].id}`)
-            }
-            className="px-4 py-2 bg-indigo-500 rounded hover:bg-indigo-400"
-          >
-            ← Previous
-          </button>
-        )}
-        {currentIndex < projects.length - 1 && (
-          <button
-            onClick={() =>
-              router.push(`/projectCollection/${projects[currentIndex + 1].id}`)
-            }
-            className="ml-auto px-4 py-2 bg-indigo-500 rounded hover:bg-indigo-400"
-          >
-            Next →
-          </button>
-        )}
+        {/* Project count below number buttons */}
+        <span className="text-sm text-gray-400">
+          Project {currentIndex + 1} of {projects.length}
+        </span>
       </div>
     </div>
   );
