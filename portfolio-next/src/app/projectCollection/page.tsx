@@ -50,6 +50,31 @@ export default function ProjectCollection() {
     link: "#",
   },
 ];
+
+const resProjects = [
+{
+    id: "res1",
+    title: "Academic Thesis Assistance",
+    description: "Supported clients with research, documentation, and visual representation for academic theses.",
+    images: ["/res/RD001.jpg"],
+    link:"#",
+},
+{
+    id: "res2",
+    title: "Cybersecurity & Digital Forensics",
+    description: "Supported clients with research, documentation, and visual representation for academic theses.",
+    images: ["/res/RD002.jpg"],
+    link:"#",
+},
+{
+    id: "res3",
+    title: "Finance & Economics",
+    description: "Supported clients with research, documentation, and visual representation for academic theses.",
+    images: ["/res/RD003.jpg"],
+    link:"#",
+},
+];
+
   return (
     <div className="relative">
       {/* Background (Reusable) */}
@@ -95,7 +120,7 @@ export default function ProjectCollection() {
           <div className="mt-6 text-white text-center">
               {activeTab === "web-dev" && <ProjectGrid projects={webDevProjects} />}
             {activeTab === "docs" && <div>📄 Documentation & Templates Content</div>}
-            {activeTab === "research" && <div>🔬 Research & Development Content</div>}
+            {activeTab === "research" && <ProjectGrid projects={resProjects}/>}
             {activeTab === "others" && <div>🗂️ Other Content Here</div>}
           </div>
           

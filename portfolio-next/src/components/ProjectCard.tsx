@@ -52,7 +52,7 @@ export default function ProjectCard({ title, description, images, link }: Projec
             src={images[0]}
             alt={`${title} mockup`}
             fill
-            className="object-contain"
+            className="object-cover"
           />
         ) : (
           // ✅ Multiple images, enable slider
@@ -73,7 +73,7 @@ export default function ProjectCard({ title, description, images, link }: Projec
                   src={img}
                   alt={`${title} mockup ${index + 1}`}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
             ))}
