@@ -57,7 +57,7 @@ const resProjects = [
     title: "Academic Thesis Assistance",
     description: "Supported clients with research, documentation, and visual representation for academic theses.",
     images: ["/res/RD001.jpg"],
-    link:"#",
+    link:"/projectCollection/thesis-sustainable-dev",
 },
 {
     id: "res2",
