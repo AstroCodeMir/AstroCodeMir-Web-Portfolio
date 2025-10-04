@@ -15,7 +15,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto py-10 text-white">
+    <div className="max-w-3xl mx-auto pt-28 pb-16 text-white">
       {/* Numbering */}
       <span className="text-sm text-gray-400">
         Project {currentIndex + 1} of {projects.length}
