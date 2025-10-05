@@ -95,9 +95,8 @@ const vidProjects = [
     title: "Ads",
     description: "Developed concise ad-style videos highlighting brand messages through motion graphics, sound synchronization, and strong visual identity.",
     images: ["/vids/VD003.jpg"],
-    link:"#",
+    link:"/projectCollection/video-ads-5",
 }
-
 ];
 
   return (

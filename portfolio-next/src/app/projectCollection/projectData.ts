@@ -221,7 +221,41 @@ export const projects = [
     "📸 Production Coordination",
     "💡 Creative Direction"
   ]
+},
+{
+  id: "video-ads-5",
+  title: "Asus Vivobook Advertisement",
+  category: "ads-videos",
+  content: `
+    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/if7qsmBwS40"
+        title="Asus Vivobook Advertisement"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    This advertisement video showcases the features, portability, and performance of the Asus Vivobook series, emphasizing its appeal to students and professionals who value both style and productivity.
+
+    I contributed to the project by assisting in concept development, helping with camera setup and lighting, and editing the final output to highlight the product’s sleek design and key features effectively.
+  `,
+  contributions: [
+    "Developed the ad concept and visual flow",
+    "Assisted with camera setup and lighting for product shots",
+    "Edited and color-graded the video for clarity and appeal",
+    "Collaborated with the creative team to align visuals with brand tone"
+  ],
+  skills: [
+    "🎥 Video Editing",
+    "💡 Concept Development",
+    "📸 Camera and Lighting Setup",
+    "🎨 Color Grading"
+  ]
 }
+
 
 
 ];
