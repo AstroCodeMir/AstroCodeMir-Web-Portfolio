@@ -71,7 +71,7 @@ const resProjects = [
     title: "Finance & Economics",
     description: "Supported clients with research, documentation, and visual representation for academic theses.",
     images: ["/res/RD003.jpg"],
-    link:"#",
+    link:"/projectCollection/finance-research",
 },
 ];
 

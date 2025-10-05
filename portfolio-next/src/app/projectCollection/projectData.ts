@@ -60,5 +60,25 @@ export const projects = [
     ],
     skills: ["🔒 Cybersecurity Awareness", "🧾 Research & Technical Writing", "🖼 Presentation Design", "🕵️ Digital Forensics Concepts"]
   },
-  
+    {
+    id: "finance-research",
+    title: "Financial Management Research Assistance",
+    content: `
+      I assisted a client in preparing academic materials on key topics in financial management, including:
+      1. Principles of Financial Management
+      2. Aspects and Process of Financial Management
+      3. Basic Scope of Financial Management
+      4. Factors Affecting Financial Planning
+
+      The goal of this work was to provide well-structured, properly cited, and example-driven
+      content that would help explain core concepts in both academic and presentation formats.
+    `,
+    contributions: [
+      "Researched financial management theories and frameworks",
+      "Compiled and formatted references using APA style",
+      "Added relevant examples to strengthen explanations",
+      "Designed and organized presentations slides for clarity and impact"
+    ],
+    skills: ["📖 Academic Research", "✍️ Citation & APA Formatting", "📊 Financial Analysis Examples", "🖼 Presentation Design"]
+  }
 ];
