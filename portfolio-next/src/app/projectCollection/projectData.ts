@@ -4,6 +4,7 @@ export const projects = [
   {
     id: "thesis-sustainable-dev",
     title: "Sustainable Development Research Assistance",
+    category: "thesis",
     content: `
       I assisted a professor in reviewing research materials related to sustainable
       development, focusing on how urban communities adapt to environmental and
@@ -23,6 +24,7 @@ export const projects = [
   {
     id: "flood-control",
     title: "Flood Control Report Assistance",
+    category: "thesis",
     content: `
       I assisted a client working on a technical report about flood control
       infrastructure in the Pasig–Marikina River Basin. 
@@ -42,6 +44,7 @@ export const projects = [
     {
     id: "iloveyou-virus",
     title: "ILOVEYOU Virus Presentation",
+    category: "cybersecurity",
     content: `
       I created a PowerPoint presentation analyzing the infamous ILOVEYOU bug (Love Bug
       virus), one of the most destructive computer worms in history that originated in the
@@ -63,6 +66,7 @@ export const projects = [
     {
     id: "finance-research",
     title: "Financial Management Research Assistance",
+    category: "finance",
     content: `
       I assisted a client in preparing academic materials on key topics in financial management, including:
       1. Principles of Financial Management

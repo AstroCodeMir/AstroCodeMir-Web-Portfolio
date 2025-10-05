@@ -7,12 +7,20 @@ export default function ProjectDetail() {
   const { id } = useParams();
   const router = useRouter();
 
-  const currentIndex = projects.findIndex((p) => p.id === id);
-  const project = projects[currentIndex];
+  // Find the current project
+  const currentProject = projects.find((p) => p.id === id);
 
-  if (!project) {
+  if (!currentProject) {
     return <div className="p-10 text-white">404 – Project not found</div>;
   }
+
+  // Filter projects within the same category/tab
+  const filteredProjects = projects.filter(
+    (p) => p.category === currentProject.category
+  );
+
+  // Find the current project's index within that filtered group
+  const currentIndex = filteredProjects.findIndex((p) => p.id === id);
 
   return (
     <div className="max-w-3xl mx-auto pt-28 pb-16 text-white">
@@ -26,22 +34,22 @@ export default function ProjectDetail() {
 
       {/* Title */}
       <h1 className="text-3xl font-bold text-pink-400 mb-4">
-        {project.title}
+        {currentProject.title}
       </h1>
 
       {/* Content */}
       <p className="text-gray-200 mb-8 leading-relaxed whitespace-pre-line">
-        {project.content}
+        {currentProject.content}
       </p>
 
       {/* Contributions */}
-      {project.contributions && (
+      {currentProject.contributions && (
         <div className="mb-8">
           <h2 className="text-xl font-semibold text-indigo-300 mb-3">
             My Contributions
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            {project.contributions.map((item, idx) => (
+            {currentProject.contributions.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
           </ul>
@@ -49,13 +57,13 @@ export default function ProjectDetail() {
       )}
 
       {/* Skills */}
-      {project.skills && (
+      {currentProject.skills && (
         <div className="mb-8">
           <h2 className="text-xl font-semibold text-indigo-300 mb-3">
             Skills Used
           </h2>
           <div className="flex flex-wrap gap-2">
-            {project.skills.map((skill, idx) => (
+            {currentProject.skills.map((skill, idx) => (
               <span
                 key={idx}
                 className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-200"
@@ -70,16 +78,16 @@ export default function ProjectDetail() {
       {/* Confidentiality Note */}
       <div className="mt-10 border-t border-gray-700 pt-4">
         <p className="text-sm text-gray-400 italic">
-          <strong>Confidentiality Note:</strong>  
-          Some details are summarized or anonymized to respect client and professor confidentiality. 
-          Only a high-level overview of my contributions is shared.
+          <strong>Confidentiality Note:</strong> Some details are summarized or
+          anonymized to respect client and professor confidentiality. Only a
+          high-level overview of my contributions is shared.
         </p>
       </div>
 
       {/* Numbered Navigation */}
-      <div className="flex flex-col items-center gap-3 mt-6">
+      <div className="flex flex-col items-center gap-3 mt-8">
         <div className="flex gap-2">
-          {projects.map((p, index) => (
+          {filteredProjects.map((p, index) => (
             <button
               key={p.id}
               onClick={() => router.push(`/projectCollection/${p.id}`)}
@@ -94,9 +102,9 @@ export default function ProjectDetail() {
           ))}
         </div>
 
-        {/* Project count below number buttons */}
+        {/* Project count below numbered buttons */}
         <span className="text-sm text-gray-400">
-          Project {currentIndex + 1} of {projects.length}
+          Project {currentIndex + 1} of {filteredProjects.length}
         </span>
       </div>
     </div>
