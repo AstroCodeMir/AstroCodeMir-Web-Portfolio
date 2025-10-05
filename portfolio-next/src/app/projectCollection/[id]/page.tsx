@@ -37,10 +37,11 @@ export default function ProjectDetail() {
         {currentProject.title}
       </h1>
 
-      {/* Content */}
-      <p className="text-gray-200 mb-8 leading-relaxed whitespace-pre-line">
-        {currentProject.content}
-      </p>
+      {/* 🖼️ Content / Image / Embedded HTML */}
+      <div
+        className="text-gray-200 mb-8 leading-relaxed prose prose-invert max-w-none"
+        dangerouslySetInnerHTML={{ __html: currentProject.content }}
+      />
 
       {/* Contributions */}
       {currentProject.contributions && (
@@ -102,7 +103,7 @@ export default function ProjectDetail() {
           ))}
         </div>
 
-        {/* Project count below numbered buttons */}
+        {/* Project count */}
         <span className="text-sm text-gray-400">
           Project {currentIndex + 1} of {filteredProjects.length}
         </span>

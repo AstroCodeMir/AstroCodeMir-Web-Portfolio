@@ -9,8 +9,8 @@ export default function ProjectCollection() {
 
   const tabs = [
     { id: "web-dev", label: "Web Development" },
-    { id: "docs", label: "Documentation & Templates" },
     { id: "research", label: "Research & Development" },
+    { id: "vids", label: "Video Creations & Projects" },
     { id: "others", label: "Others" },
   ];
   const webDevProjects = [
@@ -75,6 +75,31 @@ const resProjects = [
 },
 ];
 
+const vidProjects = [
+{
+    id: "vid1",
+    title: "Youtube & Tiktok Creations",
+    description: "Produced engaging short-form and long-form videos for social media platforms, focusing on storytelling, editing flow, and audience engagement strategies.",
+    images: ["/vids/VD001.jpg"],
+    link:"/projectCollection/video-creations-1",
+},
+{
+    id: "vid2",
+    title: "Promotional Video Projects",
+    description: "Created visually appealing promotional videos for events and campaigns, handling script flow, editing, and branding consistency across all visuals.",
+    images: ["/vids/VD002.jpg"],
+    link:"#",
+},
+{
+    id: "vid3",
+    title: "Ads",
+    description: "Developed concise ad-style videos highlighting brand messages through motion graphics, sound synchronization, and strong visual identity.",
+    images: ["/vids/VD003.jpg"],
+    link:"#",
+}
+
+];
+
   return (
     <div className="relative">
       {/* Background (Reusable) */}
@@ -119,8 +144,8 @@ const resProjects = [
           {/* Tab Content */}
           <div className="mt-6 text-white text-center">
               {activeTab === "web-dev" && <ProjectGrid projects={webDevProjects} />}
-            {activeTab === "docs" && <div>📄 Documentation & Templates Content</div>}
-            {activeTab === "research" && <ProjectGrid projects={resProjects}/>}
+              {activeTab === "research" && <ProjectGrid projects={resProjects}/>}
+            {activeTab === "vids" && <ProjectGrid projects={vidProjects}/>}
             {activeTab === "others" && <div>🗂️ Other Content Here</div>}
           </div>
           

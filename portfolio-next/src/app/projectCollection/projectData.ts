@@ -84,5 +84,109 @@ export const projects = [
       "Designed and organized presentations slides for clarity and impact"
     ],
     skills: ["📖 Academic Research", "✍️ Citation & APA Formatting", "📊 Financial Analysis Examples", "🖼 Presentation Design"]
-  }
+  },
+
+
+{
+  id: "video-creations-1",
+  title: "StreetSmartPh: Paano Kumuha ng Certificate para sa Bagong Panganak",
+  category: "videos",
+  content: `
+    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/c1k8pIzNMi4"
+        title="StreetSmartPh: Paano Kumuha ng Certificate para sa Bagong Panganak"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    This episode focused on guiding new parents through the process of securing a certificate for a newborn in the Philippines.
+
+    My role included researching the registration steps, writing a straightforward and friendly script, and assisting in on-site video shoots to ensure the visuals matched real-world procedures. I also took charge of editing to keep the content informative yet easy to follow.
+  `,
+
+  contributions: [
+    "Researched newborn registration process and documentation steps",
+    "Created a user-friendly script for general audiences",
+    "Assisted during location shoots for visual accuracy",
+    "Edited the video to balance clarity and engagement"
+  ],
+  skills: [
+    "📖 Research & Scriptwriting",
+    "🎬 Video Editing",
+    "📸 On-Site Assistance",
+    "🧠 Educational Content Design"
+  ]
+},
+
+{
+  id: "video-creations-2",
+  title: "StreetSmartPh: Paano Kumuha ng Passport sa Pilipinas",
+  category: "videos",
+  content: `
+     <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/ah9tPyENkU0"
+        title="StreetSmartPh: Paano Kumuha ng Certificate para sa Bagong Panganak"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    This video was developed to educate first-time applicants on how to apply for a Philippine passport efficiently and correctly.
+
+    I handled the research on DFA application requirements, wrote the script, and assisted during location shoots to capture accurate steps in the process. I also edited the final output to make it both informative and visually engaging for viewers.
+  `,
+  contributions: [
+    "Researched passport application process and DFA guidelines",
+    "Wrote and refined the educational video script",
+    "Assisted with location planning and on-site filming",
+    "Edited and finalized the video for clarity and pacing"
+  ],
+  skills: [
+    "📖 Government Research",
+    "✍️ Scriptwriting",
+    "🎬 Video Editing",
+    "📸 Production Assistance"
+  ]
+},
+
+{
+  id: "video-creations-3",
+  title: "StreetSmartPh: Paano Kung Hindi Kasal ang Magulang sa Pagkuha ng Birth Certificate ng Anak",
+  category: "videos",
+  content: `
+    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/k-dqZSwo6Mk"
+        title="StreetSmartPh: Paano Kung Hindi Kasal ang Magulang sa Pagkuha ng Birth Certificate ng Anak"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    This video was developed to educate parents on the process of getting a birth certificate for a child when the parents are not married.
+
+    I handled the research on legal documentation requirements, wrote the script, and assisted during location shoots to capture accurate steps in the process. I also edited the final output to make it both informative and visually engaging for viewers.
+  `,
+  contributions: [
+    "Researched legal and documentation process for unmarried parents",
+    "Wrote and refined the educational video script",
+    "Assisted with location planning and on-site filming",
+    "Edited and finalized the video for clarity and pacing"
+  ],
+  skills: [
+    "📖 Legal Research",
+    "✍️ Scriptwriting",
+    "🎬 Video Editing",
+    "📸 Production Assistance"
+  ]
+}
 ];
