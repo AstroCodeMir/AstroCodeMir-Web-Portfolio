@@ -38,5 +38,27 @@ export const projects = [
       "Ensured clear and concise document flow"
     ],
     skills: ["📑 Technical Writing", "📊 Data Organization", "💧 Environmental Research", "📂 Report Structuring"]
-  }
+  },
+    {
+    id: "iloveyou-virus",
+    title: "ILOVEYOU Virus Presentation",
+    content: `
+      I created a PowerPoint presentation analyzing the infamous ILOVEYOU bug (Love Bug
+      virus), one of the most destructive computer worms in history that originated in the
+      Philippines in 2000.
+
+      The presentation explained how the worm spread via email attachments, the technical
+      vulnerabilities it exploited, and its global impact on organizations and individuals. I also
+      highlighted lessons learned in cybersecurity, digital forensics, and the importance of user
+      awareness.
+    `,
+    contributions: [
+      "Researched the background, spread, and impact of the ILOVEYOU virus",
+      "Helped refine writing flow for clarity and readabilityExplained technical aspects in a way that was easy to understand for a general audience",
+      "Prepared visual materials for class presentationsDesigned clear and visually engaging presentation slides",
+      "Provided research support on urban sustainability topicsConnected real-world incidents to cybersecurity and digital forensics practices"
+    ],
+    skills: ["🔒 Cybersecurity Awareness", "🧾 Research & Technical Writing", "🖼 Presentation Design", "🕵️ Digital Forensics Concepts"]
+  },
+  
 ];

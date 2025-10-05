@@ -64,7 +64,7 @@ const resProjects = [
     title: "Cybersecurity & Digital Forensics",
     description: "Supported clients with research, documentation, and visual representation for academic theses.",
     images: ["/res/RD002.jpg"],
-    link:"#",
+    link:"/projectCollection/iloveyou-virus",
 },
 {
     id: "res3",
