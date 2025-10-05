@@ -88,7 +88,7 @@ const vidProjects = [
     title: "Promotional Video Projects",
     description: "Created visually appealing promotional videos for events and campaigns, handling script flow, editing, and branding consistency across all visuals.",
     images: ["/vids/VD002.jpg"],
-    link:"#",
+    link:"/projectCollection/video-promotion-4",
 },
 {
     id: "vid3",

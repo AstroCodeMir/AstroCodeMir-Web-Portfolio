@@ -188,5 +188,40 @@ export const projects = [
     "🎬 Video Editing",
     "📸 Production Assistance"
   ]
+},
+{
+  id: "video-promotion-4",
+  title: "FCSMO Promotional Video",
+  category: "promotional-videos",
+  content: `
+    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/IteoorErCNA"
+        title="FCSMO Promotional Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    This promotional video was produced for the Flood Control and Sewerage Management Office (FCSMO) to highlight its key projects, community efforts, and operational initiatives in flood management and urban safety.
+
+    I contributed by assisting in script development, coordinating shoot locations, and managing post-production editing to ensure a professional and informative final output.
+  `,
+  contributions: [
+    "Assisted in creating the video script and storyline",
+    "Coordinated filming locations and schedules",
+    "Edited raw footage to produce a polished final cut",
+    "Collaborated with the team to ensure visual and informational accuracy"
+  ],
+  skills: [
+    "🎬 Video Editing",
+    "📝 Script Assistance",
+    "📸 Production Coordination",
+    "💡 Creative Direction"
+  ]
 }
+
+
 ];
