@@ -105,7 +105,7 @@ return (
                 {
                   title: "Professional Portfolio Website",
                   status: "Ongoing",
-                  desc: "A personal portfolio website built with HTML, CSS, and JavaScript. (Ongoing)",
+                  desc: " A personal portfolio website originally built with HTML, CSS, and JavaScript, and now fully migrated to Next.js and TypeScript. This update includes improved performance, modular components, and modern UI practices.",
                 },
                 {
                   title: "Daily Dash",
