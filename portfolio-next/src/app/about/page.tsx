@@ -7,7 +7,7 @@ import "../about.css"; // ✅ Correct import since about.css is inside app/
 
 export default function AboutPage() {
 return (
-    <div className="bg-black text-white font-sans relative min-h-screen">
+    <div className="text-white font-sans relative min-h-screen">
     <Background />
 
       {/* 🌸 Main Layout */}

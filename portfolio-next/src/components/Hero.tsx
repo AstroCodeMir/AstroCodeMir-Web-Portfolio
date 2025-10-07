@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { GitHubIcon, LinkedInIcon, InstagramIcon, FacebookIcon } from "@/components/Icons";
+
+
+
 export default function Hero() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -43,12 +47,12 @@ export default function Hero() {
               
 
 
-<Link
-  href="/projectCollection"
-  className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
->
-  View My Work 
-</Link>
+              <Link
+                href="/projectCollection"
+                className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+              >
+                View My Work 
+              </Link>
 
               <a
                 href="#contact"
@@ -60,18 +64,47 @@ export default function Hero() {
           </div>
 
           {/* Social Icons */}
-          <div className="mt-12 flex justify-center gap-6">
-            <a
-              href="https://github.com/AstroCodeMir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-purple-400 transition-colors"
-            >
-              <span className="sr-only">GitHub</span>
-              {/* Add your GitHub SVG icon here */}
-            </a>
-            {/* LinkedIn, Instagram, Facebook... */}
-          </div>
+    <div className="mt-12 flex justify-center gap-6">
+      <a
+        href="https://github.com/AstroCodeMir"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-purple-400 transition-colors"
+      >
+        <GitHubIcon />
+        <span className="sr-only">GitHub</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/francine-loi-famorcan-5173b6145/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-purple-400 transition-colors"
+      >
+        <LinkedInIcon />
+        <span className="sr-only">LinkedIn</span>
+      </a>
+
+      <a
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-purple-400 transition-colors"
+      >
+        <InstagramIcon />
+        <span className="sr-only">Instagram</span>
+      </a>
+
+      <a
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-purple-400 transition-colors"
+      >
+        <FacebookIcon />
+        <span className="sr-only">Facebook</span>
+      </a>
+    </div>
         </div>
       </div>
 
