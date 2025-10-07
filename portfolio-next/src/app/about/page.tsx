@@ -42,14 +42,15 @@ return (
 
         <div className="mt-4 flex gap-2 flex-wrap items-center">
       <a
-        href="https://github.com/AstroCodeMir"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white hover:text-purple-400 transition-colors"
-      >
-        <GitHubIcon />
-        <span className="sr-only">GitHub</span>
-      </a>
+  href="https://github.com/AstroCodeMir"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
+>
+  <GitHubIcon />
+  <span>https://github.com/AstroCodeMir</span>
+</a>
+
           </div>
         </div>
 
