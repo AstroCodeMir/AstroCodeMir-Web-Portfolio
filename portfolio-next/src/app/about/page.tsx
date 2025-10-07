@@ -12,7 +12,7 @@ return (
     <Background />
 
       {/* 🌸 Main Layout */}
-        <main className="container mx-auto px-6 pt-32 pb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <main className="container mx-auto px-6 pt-32 pb-12 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
         {/* 🪞 Profile Card */}
         <div className="bg-gray-900/60 p-6 rounded-2xl shadow-md flex flex-col items-center text-center">
             <div className="w-32 h-32 rounded-full border-4 border-purple-400 overflow-hidden mb-4">
@@ -41,15 +41,16 @@ return (
         </div>
 
         <div className="mt-4 flex gap-2 flex-wrap items-center">
-      <a
+<a
   href="https://github.com/AstroCodeMir"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
 >
   <GitHubIcon />
-  <span>https://github.com/AstroCodeMir</span>
+  <span>@AstroCodeMir</span>
 </a>
+
 
           </div>
         </div>
@@ -153,25 +154,26 @@ return (
       {/* 🔙 Back Button */}
       <div className="container mx-auto px-6 pb-12 flex justify-center">
         <Link
-          href="/"
-          className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 12H5m0 0l7-7m-7 7l7 7"
-            />
-          </svg>
-          <span className="text-sm font-medium">Back</span>
-        </Link>
+  href="/"
+  className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M19 12H5m0 0l7-7m-7 7l7 7"
+    />
+  </svg>
+  <span className="text-sm font-medium">Home</span> {/* ← changed text */}
+</Link>
+
       </div>
     </div>
   );

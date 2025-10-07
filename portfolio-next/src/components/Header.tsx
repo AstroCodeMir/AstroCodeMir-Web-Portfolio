@@ -1,141 +1,146 @@
-// components/Header.tsx
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // ✅ Smart navigation handling for internal sections
+  const navLinks = [
+    {
+      href: pathname === "/about" ? "/" : "/about",
+      label: pathname === "/about" ? "Home" : "About",
+    },
+    {
+      href: "/projectCollection",
+      label: "Projects"
+    },
+    {
+      href: pathname === "/" ? "#contact" : "/#contact",
+      label: "Contact",
+    },
+  ];
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
-      <nav className="flex items-center justify-between p-6 lg:px-8 sm:px-4">
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-transparent backdrop-blur-sm">
+      <nav className="flex items-center justify-between px-6 py-4 lg:px-12">
         {/* Logo */}
-        <div className="flex lg:flex-1 items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-code h-6 w-6 text-purple-400"
-          >
+        <div className="flex items-center gap-2">
+          <svg className="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="16 18 22 12 16 6" />
             <polyline points="8 6 2 12 8 18" />
           </svg>
-          <p className="text-md text-purple-400 font-semibold">AstrocodeMir</p>
+          <p className="text-md font-semibold text-purple-400">AstroCodeMir</p>
         </div>
 
-        {/* Desktop Links */}
-        <div className="hidden lg:flex lg:gap-x-12">
-          <Link href="/about" className="text-white font-semibold">
-            About
-          </Link>
-          <a href="#features" className="text-white font-semibold">
-            Project
-          </a>
-          <a href="#skills" className="text-white font-semibold">
-            Skills
-          </a>
-          <a href="#contact" className="text-white font-semibold">
-            Contact
-          </a>
+        {/* Centered nav for lg+ */}
+        <div className="hidden lg:flex items-center justify-center flex-1 gap-x-10">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors ${
+                  isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-purple-300"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Desktop Resume Button */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* Resume button (right) */}
+        <div className="hidden lg:flex items-center">
           <a
             href="#"
-            className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-purple-500"
+            className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-purple-500 transition-colors"
           >
             Download Resume
           </a>
         </div>
 
-        {/* Hamburger Button */}
+        {/* Mobile menu toggle */}
         <div className="flex lg:hidden">
           <button
             onClick={() => setIsOpen(true)}
-            className="p-2 text-white z-[10000]"
+            className="p-2 rounded-md bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none"
+            aria-label="Open menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* -----------------------
+           MOBILE MENU (REPLACEMENT)
+         ----------------------- */}
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/40">
-          <div className="absolute top-0 right-0 h-full w-1/2 min-w-[200px] max-w-md bg-white shadow-xl flex flex-col p-4">
-            {/* Close */}
-            <div className="flex justify-end">
+        /* overlay */
+        <div className="fixed inset-0 z-[9999]">
+          {/* dark backdrop (clicking it closes the menu) */}
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setIsOpen(false)}
+            aria-hidden
+          />
+
+          {/* white side panel (full height) */}
+          <aside
+            className="fixed top-0 right-0 h-screen w-3/4 min-w-[250px] max-w-md bg-white text-gray-900 shadow-2xl flex flex-col"
+            onClick={(e) => e.stopPropagation()} // prevent overlay click from closing when clicking inside
+            aria-label="Mobile menu"
+          >
+            {/* Close button */}
+            <div className="flex justify-end p-4">
               <button
+                type="button"
                 onClick={() => setIsOpen(false)}
                 className="p-1 text-gray-700 hover:text-red-600 hover:bg-gray-100 rounded-full transition-colors duration-200"
+                aria-label="Close menu"
               >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
-            {/* Links */}
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+            <hr className="border-gray-200" />
+
+            {/* Links area: fills remaining height and scrolls if necessary */}
+            <nav className="flex-1 overflow-auto px-4 py-6">
+              <div className="space-y-2">
+                {navLinks.map((link) => (
                   <Link
-                    href="/about"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block rounded-lg px-3 py-2 text-base font-semibold transition-colors duration-200 ${
+                      pathname === link.href ? "text-purple-600 bg-gray-100" : "text-gray-900 hover:bg-gray-50"
+                    }`}
                   >
-                    About
+                    {link.label}
                   </Link>
-                  <a
-                    href="#features"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Project
-                  </a>
-                  <a
-                    href="#skills"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Skills
-                  </a>
-                  <a
-                    href="#contact"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Contact
-                  </a>
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="w-full block text-center rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-purple-500"
-                  >
-                    Download Resume
-                  </a>
-                </div>
+                ))}
               </div>
+            </nav>
+
+            {/* Footer area (resume button) */}
+            <div className="px-4 pb-6">
+              <a
+                href="#"
+                className="w-full block text-center rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-purple-500 transition-colors"
+              >
+                Download Resume
+              </a>
             </div>
-          </div>
+          </aside>
         </div>
       )}
     </header>
