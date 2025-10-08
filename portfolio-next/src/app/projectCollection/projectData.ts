@@ -2,6 +2,139 @@
 
 export const projects = [
   {
+    id: "project-daily-dash",
+    title: "Daily Dash Web Application",
+    category: "web-dev",
+    content: `
+      Daily Dash is a productivity-focused web application designed to help users manage
+      their daily tasks efficiently with data-driven insights.
+
+      I contributed to both front-end and back-end development ensuring smooth functionality, responsive design, and reliable system performance. The project emphasizes usability, clean UI, and seamless interaction between client and server.
+`,
+    contributions: [
+      "Developed dynamic front-end components using JavaScript, TailwindCSS, and Vite",
+      "Built and integrated Express.js API routes for CRUD Operations",
+      "Configured Sequelize ORM and MYSQL for database management",
+      "Implemented responsive layouts for both desktop and mobile",
+      "Collaborated on UI/UX improvements and feature debugging"
+    ],
+    skills: ["💻 Full-Stack Development",
+    "⚙️ Express.js & Sequelize",
+    "🎨 TailwindCSS & UI Design",
+    "🗃 MySQL Database Management",
+    "🧠 Problem-Solving & Debugging"]
+  },
+{
+  id: "project-alys-craft",
+  title: "Aly’s Craft",
+  category: "web-dev",
+  content: `
+    Aly’s Craft is a small creative brand project that highlights my skills in digital design,
+    branding, and content creation. The goal was to build an online presence that reflects 
+    a modern yet personal aesthetic for handcrafted and customizable items.
+
+    I designed the layout, created visual assets, and developed a responsive website that 
+    showcases the brand’s identity and products effectively.
+  `,
+  contributions: [
+    "Designed the brand logo, product visuals, and promotional materials",
+    "Developed a responsive and modern web layout using TailwindCSS and Vite",
+    "Implemented interactive components and smooth animations for better user experience",
+    "Created and managed visual content optimized for social media and web",
+    "Ensured cohesive brand identity across digital platforms"
+  ],
+  skills: [
+    "🎨 Branding & Visual Design",
+    "💻 Front-End Development",
+    "📱 Responsive Web Design",
+    "🖼 Content Creation",
+    "⚡ TailwindCSS & Vite"
+  ]
+},
+
+{
+  id: "project-portfolio",
+  title: "Personal Portfolio Website",
+  category: "web-dev",
+  content: `
+    My personal portfolio website serves as a digital showcase of my projects, skills, and 
+    creative journey in web development and design. It reflects my passion for building 
+    interactive, visually appealing, and responsive user experiences.
+
+    I designed and developed the entire site using Next.js and TailwindCSS, integrating 
+    custom animations and dynamic sections for smooth navigation and professional presentation.
+  `,
+  contributions: [
+    "Designed the overall portfolio layout and user interface",
+    "Developed reusable components and responsive layouts using Next.js and TailwindCSS",
+    "Implemented dynamic sections for project displays and tab navigation",
+    "Created custom animations and hover effects for interactivity",
+    "Optimized design for both desktop and mobile screens"
+  ],
+  skills: [
+    "🌐 Next.js Development",
+    "🎨 TailwindCSS Styling",
+    "⚡ UI/UX Design",
+    "📱 Responsive Design",
+    "✨ Front-End Animation"
+  ]
+},
+
+{
+  id: "project-lucent-chandelier",
+  title: "Lucent Chandelier",
+  category: "web-dev",
+  content: `
+    Lucent Chandelier is a concept web project focused on showcasing luxury lighting 
+    collections through an elegant and modern interface.
+
+    I designed the visuals and layout to emphasize brand sophistication while ensuring 
+    accessibility and responsive design across all devices.
+  `,
+  contributions: [
+    "Developed clean and elegant layouts using HTML, TailwindCSS, and JavaScript",
+    "Created a refined UI that reflects a luxurious brand identity",
+    "Added smooth animations and image transitions for an immersive experience",
+    "Ensured full responsiveness across mobile and desktop devices",
+    "Worked on branding consistency and visual harmony throughout the site"
+  ],
+  skills: [
+    "💡 UI Design",
+    "🎨 Visual Branding",
+    "💻 Front-End Development",
+    "📱 Responsive Web Design",
+    "⚡ TailwindCSS & Animation"
+  ]
+},
+
+{
+  id: "project-baked-cookies",
+  title: "Baked Cookies",
+  category: "web-dev",
+  content: `
+    Baked Cookies is a cozy and creative web project that highlights a local bakery brand, 
+    focusing on warm aesthetics and an inviting browsing experience.
+
+    I built a responsive layout, designed custom visuals, and developed sections for product 
+    showcases and contact information to simulate a real small business website.
+  `,
+  contributions: [
+    "Designed a warm, cozy-themed interface for a local bakery concept",
+    "Developed responsive layouts and product showcase sections using TailwindCSS",
+    "Created product images and banners for consistent brand presentation",
+    "Integrated smooth scrolling and hover animations for engagement",
+    "Optimized layout for fast loading and clear navigation"
+  ],
+  skills: [
+    "🍪 Web Design & Branding",
+    "🎨 Visual Content Creation",
+    "💻 Front-End Development",
+    "📱 Responsive Layout Design",
+    "⚡ TailwindCSS Animation & Effects"
+  ]
+},
+
+  {
     id: "thesis-sustainable-dev",
     title: "Sustainable Development Research Assistance",
     category: "thesis",

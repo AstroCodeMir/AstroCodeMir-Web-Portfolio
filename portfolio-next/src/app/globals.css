@@ -1,7 +1,4 @@
 @import "tailwindcss";
-
-
-
 /* ✅ Global defaults */
 @layer base {
   body {
@@ -26,3 +23,49 @@
   transform: translateY(0) !important;
   animation: fade-in-up 0.7s ease-out forwards;
 }
+
+/* ✅ Base glow setup */
+.icon-glow {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+/* 🌟 Default soft glow (always visible) */
+.html-glow { filter: drop-shadow(0 0 4px #e34c26aa); }
+.css-glow { filter: drop-shadow(0 0 4px #264de4aa); }
+.js-glow { filter: drop-shadow(0 0 4px #f7df1eaa); }
+.tailwind-glow { filter: drop-shadow(0 0 4px #38bdf8aa); }
+.bootstrap-glow { filter: drop-shadow(0 0 4px #7952b3aa); }
+.git-glow { filter: drop-shadow(0 0 4px #f1502faa); }
+.github-glow { filter: drop-shadow(0 0 4px #ffffffaa); } /* 🆕 GitHub (white glow) */
+.figma-glow { filter: drop-shadow(0 0 4px #a259ffaa); }
+.nextjs-glow { filter: drop-shadow(0 0 4px #ffffff55); } /* 🆕 Next.js (soft white) */
+.node-glow { filter: drop-shadow(0 0 4px #68a063aa); }
+.vite-glow { filter: drop-shadow(0 0 4px #646cffaa); }
+.typescript-glow { filter: drop-shadow(0 0 4px #3178c6aa); } /* 🆕 TypeScript (blue) */
+.vercel-glow { filter: drop-shadow(0 0 4px #ffffff55); }
+.sequelize-glow { filter: drop-shadow(0 0 4px #3b76bbaa); }
+.mysql-glow { filter: drop-shadow(0 0 4px #00758faa); }
+.express-glow { filter: drop-shadow(0 0 4px #888888aa); }
+
+/* 💫 Brighter glow when hovered */
+.icon-glow:hover {
+  transform: scale(1.1);
+}
+
+.html-glow:hover { filter: drop-shadow(0 0 10px #e34c26); }
+.css-glow:hover { filter: drop-shadow(0 0 10px #264de4); }
+.js-glow:hover { filter: drop-shadow(0 0 10px #f7df1e); }
+.tailwind-glow:hover { filter: drop-shadow(0 0 10px #38bdf8); }
+.bootstrap-glow:hover { filter: drop-shadow(0 0 10px #7952b3); }
+.git-glow:hover { filter: drop-shadow(0 0 10px #f1502f); }
+.github-glow:hover { filter: drop-shadow(0 0 10px #ffffff); } /* 🆕 GitHub bright white */
+.figma-glow:hover { filter: drop-shadow(0 0 10px #a259ff); }
+.nextjs-glow:hover { filter: drop-shadow(0 0 10px #ffffff); } /* 🆕 Next.js bright white */
+.node-glow:hover { filter: drop-shadow(0 0 10px #68a063); }
+.vite-glow:hover { filter: drop-shadow(0 0 10px #646cff); }
+.typescript-glow:hover { filter: drop-shadow(0 0 10px #3178c6); } /* 🆕 TypeScript bright */
+.vercel-glow:hover { filter: drop-shadow(0 0 10px #ffffff); }
+.sequelize-glow:hover { filter: drop-shadow(0 0 10px #3b76bb); }
+.mysql-glow:hover { filter: drop-shadow(0 0 10px #00758f); }
+.express-glow:hover { filter: drop-shadow(0 0 10px #888888); }
