@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Background from "../../components/Background";
 import ProjectGrid from "../../components/ProjectGrid";
 
 export default function ProjectCollection() {

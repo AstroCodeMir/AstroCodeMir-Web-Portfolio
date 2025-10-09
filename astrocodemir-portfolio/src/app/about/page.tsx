@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Background from "../../components/Background";
-import { GitHubIcon } from "@/components/Icons";
 import "../about.css";
 
 export default function AboutPage() {
