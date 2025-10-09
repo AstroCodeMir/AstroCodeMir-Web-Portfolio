@@ -22,7 +22,14 @@ export const projects = [
     "⚙️ Express.js & Sequelize",
     "🎨 TailwindCSS & UI Design",
     "🗃 MySQL Database Management",
-    "🧠 Problem-Solving & Debugging"]
+    "🧠 Problem-Solving & Debugging"],
+      images: [
+    "/dash/DL001.png",
+    "/dash/DL002.png",
+    "/dash/DL003.png",
+    "/dash/DL004.png"
+  ],
+    link: "https://github.com/AstroCodeMir"
   },
 {
   id: "project-alys-craft",
