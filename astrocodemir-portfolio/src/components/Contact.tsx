@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
           Get In Touch
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-gray-300 md:text-lg leading-relaxed">
-          I'm always open to discussing new projects, creative ideas, or
+          I&apos;m always open to discussing new projects, creative ideas, or
           opportunities to be part of your vision. Here are the best ways to
           reach me.
         </p>

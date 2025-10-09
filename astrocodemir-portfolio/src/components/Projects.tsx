@@ -15,7 +15,7 @@ export default function Projects() {
           Featured Projects
         </h2>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-          Here's a selection of my work. Check out all my projects for a deeper dive.
+          Here&apos;s a selection of my work. Check out all my projects for a deeper dive.
         </p>
       </div>
 
