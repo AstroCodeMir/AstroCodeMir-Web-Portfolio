@@ -26,77 +26,52 @@ export default function ProjectCard({ title, description, images, link }: Projec
     return () => clearInterval(interval);
   }, [hovered, images.length]);
 
-  const handleMouseEnter = () => {
-    if (images.length > 1) {
-      setHovered(true);
-      setCurrentIndex(0); // start from the first image
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-    setCurrentIndex(0); // reset to first image
-  };
-
   return (
     <div
-      className="project-card rounded-lg overflow-hidden flex flex-col bg-slate-900 shadow-lg"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="group rounded-2xl overflow-hidden bg-gradient-to-b from-[#0f0a1a] to-[#05060d] 
+      border border-white/5 shadow-[0_0_25px_rgba(255,255,255,0.05)] 
+      transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.08)] hover:-translate-y-1"
     >
-      {/* Image Area */}
-      <div className="relative w-full h-60 sm:h-64 lg:h-60 overflow-hidden">
-        {images.length === 1 ? (
-          // ✅ Just one image, no slider
-          <Image
-            src={images[0]}
-            alt={`${title} mockup`}
-            fill
-            className="object-cover"
-          />
-        ) : (
-          // ✅ Multiple images, enable slider
-          <div
-            className="flex transition-transform duration-[1000ms] ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
-              width: `${100 * images.length}%`,
-            }}
-          >
-            {images.map((img, index) => (
-              <div
-                key={index}
-                className="h-60 sm:h-64 lg:h-60 relative flex-shrink-0"
-                style={{ width: `${100 / images.length}%` }}
-              >
-                <Image
-                  src={img}
-                  alt={`${title} mockup ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+    {/* Image Area */}
+<div
+  className="relative w-full h-60 sm:h-64 lg:h-60 overflow-hidden cursor-pointer"
+  onMouseEnter={() => setHovered(true)}
+  onMouseLeave={() => {
+    setHovered(false);
+    setCurrentIndex(0); // 👈 return to first image when mouse leaves
+  }}
+>
+  {images.map((img, index) => (
+    <Image
+      key={index}
+      src={img}
+      alt={`${title} mockup ${index + 1}`}
+      fill
+      className={`object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out
+        ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+    />
+  ))}
+</div>
+
 
       {/* Card Content */}
-      <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-xl font-semibold mb-2 text-pink-400">{title}</h3>
-        <p className="text-white text-sm mb-4 flex-grow">{description}</p>
+      <div className="p-6 flex flex-col text-white">
+        <h3 className="text-lg font-semibold mb-2 text-slate-200 group-hover:text-slate-100 transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
 
         {link && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-auto self-start text-pink-400 hover:text-indigo-300 transition-colors duration-300 font-medium inline-flex items-center"
+            className="mt-auto text-indigo-300 hover:text-indigo-200 transition-colors duration-300 font-medium inline-flex items-center gap-2"
           >
             Learn More
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 ml-2 learn-more-arrow"
+              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

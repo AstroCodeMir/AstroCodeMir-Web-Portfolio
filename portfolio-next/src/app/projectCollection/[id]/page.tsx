@@ -1,131 +1,156 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
+import { useState } from "react";
+import Image from "next/image";
 import { projects } from "../projectData";
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const router = useRouter();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Find the current project
   const currentProject = projects.find((p) => p.id === id);
+  if (!currentProject)
+    return <div className="p-10 text-gray-300">404 – Project not found</div>;
 
-  if (!currentProject) {
-    return <div className="p-10 text-white">404 – Project not found</div>;
-  }
+  const images = currentProject.images || [];
 
-  // Filter projects within the same category/tab
+  // Filter same-category projects for pagination
   const filteredProjects = projects.filter(
     (p) => p.category === currentProject.category
   );
-
-  // Find the current project's index within that filtered group
-  const currentIndex = filteredProjects.findIndex((p) => p.id === id);
+  const currentProjectIndex = filteredProjects.findIndex((p) => p.id === id);
 
   return (
-    <div className="max-w-3xl mx-auto pt-28 pb-16 text-white">
-      {/* 🔙 Back Button */}
-      <button
-        onClick={() => router.push("/projectCollection")}
-        className="mb-6 inline-flex items-center text-sm text-gray-300 hover:text-pink-400 transition-colors"
-      >
-        ← Back to Projects
-      </button>
+    <div className="min-h-screen bg-[#0a0a0f] flex flex-col items-center py-24 px-4">
+      {/* 🌌 Project Card */}
+      <div className="max-w-6xl w-full bg-gradient-to-r from-[#0f0a1a] to-[#12122a] rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2">
+        {/* 🧠 LEFT CONTENT */}
+        <div className="p-10 flex flex-col justify-center text-gray-200">
+          <button
+            onClick={() => router.push("/projectCollection")}
+            className="text-sm text-gray-400 hover:text-indigo-400 mb-6 transition-colors"
+          >
+            ← Back to Projects
+          </button>
 
-      {/* Title */}
-      <h1 className="text-3xl font-bold text-pink-400 mb-4">
-        {currentProject.title}
-      </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-indigo-400 mb-4">
+            {currentProject.title}
+          </h1>
 
-      {/* 🖼️ Content / Image / Embedded HTML */}
+          <p className="text-gray-400 mb-6 leading-relaxed">
+            {
+              currentProject.content ||
+              "A detailed look into my project, including technical stack, design approach, and execution details."}
+          </p>
+
+          {/* Contributions */}
+          {currentProject.contributions && (
+            <div className="mb-6">
+              <h2 className="text-lg font-semibold text-indigo-300 mb-2">
+                Contributions
+              </h2>
+              <ul className="list-disc pl-6 space-y-1 text-gray-300 text-sm">
+                {currentProject.contributions.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Skills */}
+          {currentProject.skills && (
+            <div className="mb-8">
+              <h2 className="text-lg font-semibold text-indigo-300 mb-2">
+                Skills Used
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {currentProject.skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-[#1a1a2e] border border-indigo-600 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Link Button */}
+          {currentProject.link && (
+            <a
+              href={currentProject.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-fit px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-full text-white font-semibold transition-all"
+            >
+              🔗 View Project
+            </a>
+          )}
+        </div>
+
+        {/* 🖼️ RIGHT IMAGE SLIDER */}
+        {images.length > 0 && (
+  <div className="relative bg-gradient-to-b from-[#1a1a2e] to-[#0e0e1a] flex items-center justify-center rounded-lg overflow-hidden">
+    <div className="relative w-full h-auto max-h-[480px] sm:max-h-[520px] overflow-hidden flex items-center justify-center">
       <div
-        className="text-gray-200 mb-8 leading-relaxed prose prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: currentProject.content }}
-      />
-
-      {/* Project Images (if available) */}
-{currentProject.images && currentProject.images.length > 0 && (
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-    {currentProject.images.map((src, index) => (
-      <img
-        key={index}
-        src={src}
-        alt={`${currentProject.title} screenshot ${index + 1}`}
-        className="rounded-lg shadow-lg object-cover hover:scale-105 transition-transform duration-300"
-      />
-    ))}
-  </div>
-)}
-
-{/* 🔗 Project Link (if available) */}
-{currentProject.link && (
-  <div className="mb-10 text-center">
-    <a
-      href={currentProject.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block px-6 py-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-md transition-all duration-300"
-    >
-      🔗 View Live Project
-    </a>
-  </div>
-)}
-
-
-
-      {/* Contributions */}
-      {currentProject.contributions && (
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold text-indigo-300 mb-3">
-            My Contributions
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            {currentProject.contributions.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Skills */}
-      {currentProject.skills && (
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold text-indigo-300 mb-3">
-            Skills Used
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {currentProject.skills.map((skill, idx) => (
-              <span
-                key={idx}
-                className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-200"
-              >
-                {skill}
-              </span>
-            ))}
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          width: `${100 * images.length}%`,
+        }}
+      >
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className="relative flex-shrink-0 w-full flex items-center justify-center bg-[#0f0a1a]"
+            style={{ height: "auto", maxHeight: "520px" }}
+          >
+            <Image
+              src={src}
+              alt={`${currentProject.title} image ${index + 1}`}
+              width={900}
+              height={600}
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 900px"
+              className="object-contain w-full h-auto mx-auto"
+            />
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
 
-      {/* Confidentiality Note */}
-      <div className="mt-10 border-t border-gray-700 pt-4">
-        <p className="text-sm text-gray-400 italic">
-          <strong>Confidentiality Note:</strong> Some details are summarized or
-          anonymized to respect client and professor confidentiality. Only a
-          high-level overview of my contributions is shared.
-        </p>
+    {/* Dots (manual only, no auto-slide) */}
+    {images.length > 1 && (
+      <div className="absolute bottom-4 flex gap-2 justify-center w-full">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-2.5 h-2.5 rounded-full transition-all ${
+              idx === currentIndex ? "bg-indigo-400" : "bg-gray-600"
+            }`}
+          />
+        ))}
+      </div>
+    )}
+  </div>
+)}
+
       </div>
 
-      {/* Numbered Navigation */}
-      <div className="flex flex-col items-center gap-3 mt-8">
+      {/* 🔢 Pagination BELOW Card */}
+      <div className="flex flex-col items-center gap-3 mt-10">
         <div className="flex gap-2">
           {filteredProjects.map((p, index) => (
             <button
               key={p.id}
               onClick={() => router.push(`/projectCollection/${p.id}`)}
-              className={`px-3 py-1 rounded ${
-                index === currentIndex
-                  ? "bg-pink-500 text-white"
-                  : "bg-gray-700 hover:bg-gray-600 text-gray-200"
+              className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                index === currentProjectIndex
+                  ? "bg-indigo-600 text-white"
+                  : "bg-[#1a1a2e] text-gray-300 hover:bg-[#242447]"
               }`}
             >
               {index + 1}
@@ -133,9 +158,8 @@ export default function ProjectDetail() {
           ))}
         </div>
 
-        {/* Project count */}
         <span className="text-sm text-gray-400">
-          Project {currentIndex + 1} of {filteredProjects.length}
+          Project {currentProjectIndex + 1} of {filteredProjects.length}
         </span>
       </div>
     </div>

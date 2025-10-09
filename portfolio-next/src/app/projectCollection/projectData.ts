@@ -6,10 +6,7 @@ export const projects = [
     title: "Daily Dash Web Application",
     category: "web-dev",
     content: `
-      Daily Dash is a productivity-focused web application designed to help users manage
-      their daily tasks efficiently with data-driven insights.
-
-      I contributed to both front-end and back-end development ensuring smooth functionality, responsive design, and reliable system performance. The project emphasizes usability, clean UI, and seamless interaction between client and server.
+      Daily Dash is a productivity web app designed for efficient task management with data-driven insights. I worked on both front-end and back-end to ensure smooth, responsive, and reliable performance.
 `,
     contributions: [
       "Developed dynamic front-end components using JavaScript, TailwindCSS, and Vite",
@@ -56,7 +53,15 @@ export const projects = [
     "📱 Responsive Web Design",
     "🖼 Content Creation",
     "⚡ TailwindCSS & Vite"
-  ]
+  ],
+
+    images: [
+    "/alys/AC001.png",
+    "/alys/AC002.png",
+    "/alys/AC003.png",
+    "/alys/AC004.png"
+  ],
+   link: "https://astrocodemir.github.io/AlysCraft/"
 },
 
 {
@@ -84,7 +89,14 @@ export const projects = [
     "⚡ UI/UX Design",
     "📱 Responsive Design",
     "✨ Front-End Animation"
-  ]
+  ],
+  images: [
+    "/portfolio/AS001.png",
+    "/portfolio/AS002.png",
+    "/portfolio/AS003.png",
+    "/portfolio/AS004.png"
+  ],
+   link: "https://github.com/AstroCodeMir"
 },
 
 {
@@ -111,7 +123,14 @@ export const projects = [
     "💻 Front-End Development",
     "📱 Responsive Web Design",
     "⚡ TailwindCSS & Animation"
-  ]
+  ],
+  images: [
+    "/lucent/LC001.png",
+    "/lucent/LC002.png",
+    "/lucent/LC003.png",
+    "/lucent/LC004.png"
+  ],
+   link: "https://astrocodemir.github.io/LucentChandelier/"
 },
 
 {
@@ -138,7 +157,14 @@ export const projects = [
     "💻 Front-End Development",
     "📱 Responsive Layout Design",
     "⚡ TailwindCSS Animation & Effects"
-  ]
+  ],
+  images: [
+    "/baked/BC001.png",
+    "/baked/BC002.png",
+    "/baked/BC003.png",
+    "/baked/BC004.png"
+  ],
+  link: "https://astrocodemir.github.io/BakesGoods-Cookies/"
 },
 
   {

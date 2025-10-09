@@ -8,9 +8,9 @@ export default function ProjectCollection() {
   const [activeTab, setActiveTab] = useState("web-dev");
 
 const tabs = [
-    { id: "web-dev", label: "Web Development" },
-    { id: "research", label: "Research & Development" },
-    { id: "vids", label: "Video Creations & Projects" },
+    { id: "web-dev", label: "Web" },
+    { id: "research", label: "Docs" },
+    { id: "vids", label: "Media" },
     { id: "others", label: "Others" },
   ];
   const webDevProjects = [
@@ -101,54 +101,60 @@ const vidProjects = [
 
   return (
     <div className="relative">
-      {/* Background (Reusable) */}
-      <Background />
-
       {/* Content */}
       <main className="container mx-auto px-4 py-16 md:py-24 pt-32">
         {/* Page Header */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-            My Professional Portfolio
-          </h1>
-          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
-            A curated collection of my work, from full-stack web applications to research and creative projects.
-          </p>
-        </section>
+  <h1 className="text-3xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-purple-400 via-indigo-300 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(120,100,255,0.3)]">
+    My Professional Portfolio
+  </h1>
+  <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+    A showcase of my web development, research, and creative work — built with passion, precision, and purpose.
+  </p>
+</section>
+
 
         {/* Tabs */}
-        <div className="mb-12">
-          <div className="flex justify-center">
-            <nav
-              className="flex space-x-2 md:space-x-4 bg-slate-800/60 p-2 rounded-lg border border-slate-700"
-              aria-label="Tabs"
-            >
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`py-2 px-4 rounded-md font-medium text-sm transition-colors duration-300
-                    ${
-                      activeTab === tab.id
-                        ? "bg-purple-600 text-white shadow-lg"
-                        : "text-gray-400 hover:text-white"
-                    }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </nav>
-          </div>
 
-          {/* Tab Content */}
-          <div className="mt-6 text-white text-center">
-              {activeTab === "web-dev" && <ProjectGrid projects={webDevProjects} />}
-              {activeTab === "research" && <ProjectGrid projects={resProjects}/>}
-            {activeTab === "vids" && <ProjectGrid projects={vidProjects}/>}
-            {activeTab === "others" && <div>🗂️ Other Content Here</div>}
-          </div>
-          
-        </div>
+<div className="mb-10">
+  <div className="flex justify-center">
+    <nav
+      className="flex flex-wrap justify-center gap-1.5 bg-[#0f0a1a]/70 backdrop-blur-sm p-1.5 rounded-xl border border-[#1e1830]/70 shadow-inner"
+      aria-label="Tabs"
+    >
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`relative py-1.5 px-4 rounded-md font-medium text-sm transition-all duration-300
+            ${
+              activeTab === tab.id
+                ? "bg-gradient-to-r from-[#1b1733] to-[#2a2250] text-white shadow-md shadow-[#2a2250]/30"
+                : "text-gray-300 hover:text-white hover:bg-[#1b1733]/60"
+            }`}
+        >
+          {tab.label}
+
+          {/* Soft underline for active tab */}
+          {activeTab === tab.id && (
+            <span className="absolute inset-x-3 bottom-0 h-[2px] bg-gradient-to-r from-[#6b61ff] via-[#8a7dff] to-transparent rounded-full opacity-70"></span>
+          )}
+        </button>
+      ))}
+    </nav>
+  </div>
+
+  {/* Tab Content */}
+  <div className="mt-6 text-white text-center">
+    {activeTab === "web-dev" && <ProjectGrid projects={webDevProjects} />}
+    {activeTab === "research" && <ProjectGrid projects={resProjects} />}
+    {activeTab === "vids" && <ProjectGrid projects={vidProjects} />}
+    {activeTab === "others" && <div>🗂️ Other Content Here</div>}
+  </div>
+</div>
+
+
+
       </main>
     </div>
   );
