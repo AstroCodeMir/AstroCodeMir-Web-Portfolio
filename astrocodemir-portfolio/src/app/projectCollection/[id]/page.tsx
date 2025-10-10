@@ -25,8 +25,9 @@ export default function ProjectDetail() {
   return (
     <div className="min-h-screen bg-[#0a0a0f] flex flex-col items-center py-24 px-4">
       {/* 🌌 Project Card */}
-      <div className="max-w-6xl w-full bg-gradient-to-r from-[#0f0a1a] to-[#12122a] rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2">
-        {/* 🧠 LEFT CONTENT */}
+      <div className="max-w-6xl w-full bg-gradient-to-r from-[#0f0a1a] to-[#12122a] rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2 gap-6">
+        
+        {/* 🧠 LEFT COLUMN */}
         <div className="p-10 flex flex-col justify-center text-gray-200">
           <button
             onClick={() => router.push("/projectCollection")}
@@ -40,8 +41,7 @@ export default function ProjectDetail() {
           </h1>
 
           <p className="text-gray-400 mb-6 leading-relaxed">
-            {
-              currentProject.content ||
+            {currentProject.content ||
               "A detailed look into my project, including technical stack, design approach, and execution details."}
           </p>
 
@@ -91,53 +91,62 @@ export default function ProjectDetail() {
           )}
         </div>
 
-        {/* 🖼️ RIGHT IMAGE SLIDER */}
-        {images.length > 0 && (
-  <div className="relative bg-gradient-to-b from-[#1a1a2e] to-[#0e0e1a] flex items-center justify-center rounded-lg overflow-hidden">
-    <div className="relative w-full h-auto max-h-[480px] sm:max-h-[520px] overflow-hidden flex items-center justify-center">
-      <div
-        className="flex transition-transform duration-500 ease-in-out"
-        style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
-          width: `${100 * images.length}%`,
-        }}
-      >
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="relative flex-shrink-0 w-full flex items-center justify-center bg-[#0f0a1a]"
-            style={{ height: "auto", maxHeight: "520px" }}
-          >
-            <Image
-              src={src}
-              alt={`${currentProject.title} image ${index + 1}`}
-              width={900}
-              height={600}
-              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 900px"
-              className="object-contain w-full h-auto mx-auto"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+        {/* 🖼️ / 🎬 RIGHT MEDIA COLUMN */}
+        <div className="flex items-center justify-center p-6">
+          {currentProject.videoSrc ? (
+            <div className="relative w-full aspect-video max-w-full">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={currentProject.videoSrc}
+                title={currentProject.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          ) : images.length > 0 ? (
+            <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentIndex * 100}%)`,
+                  width: `${100 * images.length}%`
+                }}
+              >
+                {images.map((src, index) => (
+                  <div key={index} className="flex-shrink-0 w-full flex items-center justify-center">
+                    <Image
+                      src={src}
+                      alt={`${currentProject.title} image ${index + 1}`}
+                      width={900}
+                      height={600}
+                      sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 900px"
+                      className="object-contain w-full h-auto"
+                    />
+                  </div>
+                ))}
+              </div>
 
-    {/* Dots (manual only, no auto-slide) */}
-    {images.length > 1 && (
-      <div className="absolute bottom-4 flex gap-2 justify-center w-full">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              idx === currentIndex ? "bg-indigo-400" : "bg-gray-600"
-            }`}
-          />
-        ))}
-      </div>
-    )}
-  </div>
-)}
-
+              {/* Slider Dots */}
+              {images.length > 1 && (
+                <div className="absolute bottom-4 flex gap-2 justify-center w-full">
+                  {images.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentIndex(idx)}
+                      className={`w-2.5 h-2.5 rounded-full transition-all ${
+                        idx === currentIndex ? "bg-indigo-400" : "bg-gray-600"
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="flex items-center justify-center w-full h-60 text-gray-500">
+              No media available
+            </div>
+          )}
+        </div>
       </div>
 
       {/* 🔢 Pagination BELOW Card */}

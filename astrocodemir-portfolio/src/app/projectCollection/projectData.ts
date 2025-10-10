@@ -257,23 +257,10 @@ export const projects = [
   id: "video-creations-1",
   title: "StreetSmartPh: Paano Kumuha ng Certificate para sa Bagong Panganak",
   category: "videos",
-  content: `
-    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/c1k8pIzNMi4"
-        title="StreetSmartPh: Paano Kumuha ng Certificate para sa Bagong Panganak"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
-    This episode focused on guiding new parents through the process of securing a certificate for a newborn in the Philippines.
-
+  content: ` This episode focused on guiding new parents through the process of securing a certificate for a newborn in the Philippines.
     My role included researching the registration steps, writing a straightforward and friendly script, and assisting in on-site video shoots to ensure the visuals matched real-world procedures. I also took charge of editing to keep the content informative yet easy to follow.
   `,
-
+videoSrc: "https://www.youtube.com/embed/c1k8pIzNMi4", // optional
   contributions: [
     "Researched newborn registration process and documentation steps",
     "Created a user-friendly script for general audiences",
@@ -293,21 +280,12 @@ export const projects = [
   title: "StreetSmartPh: Paano Kumuha ng Passport sa Pilipinas",
   category: "videos",
   content: `
-     <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/ah9tPyENkU0"
-        title="StreetSmartPh: Paano Kumuha ng Certificate para sa Bagong Panganak"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
+     
     This video was developed to educate first-time applicants on how to apply for a Philippine passport efficiently and correctly.
 
     I handled the research on DFA application requirements, wrote the script, and assisted during location shoots to capture accurate steps in the process. I also edited the final output to make it both informative and visually engaging for viewers.
   `,
+  videoSrc: "https://www.youtube.com/embed/ah9tPyENkU0" ,
   contributions: [
     "Researched passport application process and DFA guidelines",
     "Wrote and refined the educational video script",
@@ -327,21 +305,11 @@ export const projects = [
   title: "StreetSmartPh: Paano Kung Hindi Kasal ang Magulang sa Pagkuha ng Birth Certificate ng Anak",
   category: "videos",
   content: `
-    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/k-dqZSwo6Mk"
-        title="StreetSmartPh: Paano Kung Hindi Kasal ang Magulang sa Pagkuha ng Birth Certificate ng Anak"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
     This video was developed to educate parents on the process of getting a birth certificate for a child when the parents are not married.
 
     I handled the research on legal documentation requirements, wrote the script, and assisted during location shoots to capture accurate steps in the process. I also edited the final output to make it both informative and visually engaging for viewers.
   `,
+  videoSrc: "https://www.youtube.com/embed/k-dqZSwo6Mk",
   contributions: [
     "Researched legal and documentation process for unmarried parents",
     "Wrote and refined the educational video script",
@@ -360,21 +328,11 @@ export const projects = [
   title: "FCSMO Promotional Video",
   category: "promotional-videos",
   content: `
-    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/IteoorErCNA"
-        title="FCSMO Promotional Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
     This promotional video was produced for the Flood Control and Sewerage Management Office (FCSMO) to highlight its key projects, community efforts, and operational initiatives in flood management and urban safety.
 
     I contributed by assisting in script development, coordinating shoot locations, and managing post-production editing to ensure a professional and informative final output.
   `,
+  videoSrc: "https://www.youtube.com/embed/IteoorErCNA",
   contributions: [
     "Assisted in creating the video script and storyline",
     "Coordinated filming locations and schedules",
@@ -393,21 +351,11 @@ export const projects = [
   title: "Asus Vivobook Advertisement",
   category: "ads-videos",
   content: `
-    <div class="relative w-full flex justify-center mb-6 aspect-video max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/if7qsmBwS40"
-        title="Asus Vivobook Advertisement"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
     This advertisement video showcases the features, portability, and performance of the Asus Vivobook series, emphasizing its appeal to students and professionals who value both style and productivity.
 
     I contributed to the project by assisting in concept development, helping with camera setup and lighting, and editing the final output to highlight the product’s sleek design and key features effectively.
   `,
+  videoSrc: "https://www.youtube.com/embed/if7qsmBwS40",
   contributions: [
     "Developed the ad concept and visual flow",
     "Assisted with camera setup and lighting for product shots",

@@ -8,7 +8,7 @@ export default function ProjectCollection() {
 
 const tabs = [
     { id: "web-dev", label: "Web" },
-    { id: "research", label: "Docs" },
+    { id: "docs", label: "Docs" },
     { id: "vids", label: "Media" },
     { id: "others", label: "Others" },
   ];
@@ -50,26 +50,26 @@ const tabs = [
   },
 ];
 
-const resProjects = [
+const docsProjects = [
 {
-    id: "res1",
+    id: "doc1",
     title: "Academic Thesis Assistance",
     description: "Supported clients with research, documentation, and visual representation for academic theses.",
-    images: ["/res/RD001.jpg"],
+    images: ["/docs/DOC001.jpg"],
     link:"/projectCollection/thesis-sustainable-dev",
 },
 {
-    id: "res2",
+    id: "doc2",
     title: "Cybersecurity & Digital Forensics",
     description: "Supported clients with research, documentation, and visual representation for academic theses.",
-    images: ["/res/RD002.jpg"],
+    images: ["/docs/DOC002.jpg"],
     link:"/projectCollection/iloveyou-virus",
 },
 {
-    id: "res3",
+    id: "doc3",
     title: "Finance & Economics",
     description: "Supported clients with research, documentation, and visual representation for academic theses.",
-    images: ["/res/RD003.jpg"],
+    images: ["/docs/DOC003.jpg"],
     link:"/projectCollection/finance-research",
 },
 ];
@@ -146,7 +146,7 @@ const vidProjects = [
   {/* Tab Content */}
   <div className="mt-6 text-white text-center">
     {activeTab === "web-dev" && <ProjectGrid projects={webDevProjects} />}
-    {activeTab === "research" && <ProjectGrid projects={resProjects} />}
+    {activeTab === "docs" && <ProjectGrid projects={docsProjects} />}
     {activeTab === "vids" && <ProjectGrid projects={vidProjects} />}
     {activeTab === "others" && <div>🗂️ Other Content Here</div>}
   </div>
